@@ -2,7 +2,7 @@
   description = "Deployment using deploy-rs";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-25.05";
+    nixpkgs.url = "nixpkgs/nixos-25.11";
 
     deploy-rs = {
       url = "github:serokell/deploy-rs";
