@@ -4,15 +4,12 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.11";
 
-    deploy-rs = {
-      url = "github:serokell/deploy-rs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    deploy-rs = { url = "github:serokell/deploy-rs"; };
 
     utils.url = "github:numtide/flake-utils";
 
     fudo-nixos = {
-      url = "path:/state/deploy/config";
+      url = "git+ssh://git@github.com/fudoniten/nixos-config";
       inputs = {
         fudo-entities.follows = "fudo-entities";
         nixpkgs.follows = "nixpkgs";
