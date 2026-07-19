@@ -20,13 +20,26 @@
       url = "git+ssh://git@github.com/fudoniten/fudo-entities";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Deployed on its own as a standalone deploy-rs profile, so the static
+    # site can ship without a full system rebuild. Kept out of fudo-nixos
+    # so bumping it here doesn't invalidate any host's system closure.
+    game-site = {
+      url = "github:fudoniten/game-site";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { self, nixpkgs, utils, deploy-rs, fudo-nixos, fudo-entities, ... }@inputs:
+    { self, nixpkgs, utils, deploy-rs, fudo-nixos, fudo-entities, game-site
+    , ... }@inputs:
     with nixpkgs.lib;
     let
       defaultSshOpts = [ "-oControlMaster=no" "-oControlPath=none" ];
+
+      # Hosts that serve the game-site static bundle via its own profile.
+      gameSiteHosts = [ "arx" ];
+      gameSitePackage = game-site.packages.x86_64-linux.default;
 
       allNodes = let
         nodeEntities = filterAttrs (_: hostOpts: hostOpts.deploy.enable)
@@ -38,11 +51,36 @@
 
         inherit (hostOpts) site domain;
 
-        profiles.system = {
-          user = "root";
-          path = deploy-rs.lib.x86_64-linux.activate.nixos
-            fudo-nixos.nixosConfigurations."${hostname}";
-        };
+        # Deploy the system profile first so nginx exists before the
+        # game-site profile reloads it (attr order alone would run the
+        # alphabetically-earlier "game-site" first).
+        profilesOrder = [ "system" ]
+          ++ (optional (elem hostname gameSiteHosts) "game-site");
+
+        profiles = {
+          system = {
+            user = "root";
+            path = deploy-rs.lib.x86_64-linux.activate.nixos
+              fudo-nixos.nixosConfigurations."${hostname}";
+          };
+        } // (optionalAttrs (elem hostname gameSiteHosts) {
+          # Standalone static-site profile. Activation links the current
+          # bundle into the path nginx serves (/srv/www/games) and reloads
+          # nginx -- it never restarts sshd, so magic-rollback health checks
+          # pass on a live deploy (no --boot needed). The interpolated store
+          # path keeps the bundle in the profile closure, so it is copied to
+          # the host and pinned as a GC root. Target it alone with
+          # `.#deploy.<host>.game-site`.
+          game-site = {
+            user = "root";
+            profilePath = "/nix/var/nix/profiles/game-site";
+            path = deploy-rs.lib.x86_64-linux.activate.custom gameSitePackage ''
+              mkdir -p /srv/www
+              ln -sfn ${gameSitePackage} /srv/www/games
+              systemctl reload nginx
+            '';
+          };
+        });
       }) nodeEntities;
 
       domains = fudo-entities.entities.domains;
