@@ -21,9 +21,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Deployed on its own as a standalone deploy-rs profile, so the static
-    # site can ship without a full system rebuild. Kept out of fudo-nixos
-    # so bumping it here doesn't invalidate any host's system closure.
+    # Deployed on its own as a standalone deploy-rs profile (see
+    # ./profiles/game-site.nix), so the static site can ship without a full
+    # system rebuild. Kept out of fudo-nixos so bumping it here doesn't
+    # invalidate any host's system closure.
     game-site = {
       url = "github:fudoniten/game-site";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,57 +32,39 @@
   };
 
   outputs =
-    { self, nixpkgs, utils, deploy-rs, fudo-nixos, fudo-entities, game-site
-    , ... }@inputs:
+    { self, nixpkgs, utils, deploy-rs, fudo-nixos, fudo-entities, ... }@inputs:
     with nixpkgs.lib;
     let
       defaultSshOpts = [ "-oControlMaster=no" "-oControlPath=none" ];
 
-      # Hosts that serve the game-site static bundle via its own profile.
-      gameSiteHosts = [ "arx" ];
-      gameSitePackage = game-site.packages.x86_64-linux.default;
+      # Per-component standalone deploy-rs profiles, keyed by host. See
+      # ./profiles for the registry and the individual component definitions.
+      extraProfilesFor = import ./profiles { inherit inputs; lib = nixpkgs.lib; };
 
       allNodes = let
         nodeEntities = filterAttrs (_: hostOpts: hostOpts.deploy.enable)
           fudo-entities.entities.hosts;
-      in mapAttrs (hostname: hostOpts: {
-        hostname = fudo-entities.lib.getHostIpv4 hostname;
-        sshOpts = defaultSshOpts ++ hostOpts.deploy.ssh-options;
-        sshUser = "root";
+      in mapAttrs (hostname: hostOpts:
+        let extraProfiles = extraProfilesFor hostname;
+        in {
+          hostname = fudo-entities.lib.getHostIpv4 hostname;
+          sshOpts = defaultSshOpts ++ hostOpts.deploy.ssh-options;
+          sshUser = "root";
 
-        inherit (hostOpts) site domain;
+          inherit (hostOpts) site domain;
 
-        # Deploy the system profile first so nginx exists before the
-        # game-site profile reloads it (attr order alone would run the
-        # alphabetically-earlier "game-site" first).
-        profilesOrder = [ "system" ]
-          ++ (optional (elem hostname gameSiteHosts) "game-site");
+          # The system profile activates first, so its services exist before
+          # any component profile (which only reloads/refreshes them) runs.
+          profilesOrder = [ "system" ] ++ (attrNames extraProfiles);
 
-        profiles = {
-          system = {
-            user = "root";
-            path = deploy-rs.lib.x86_64-linux.activate.nixos
-              fudo-nixos.nixosConfigurations."${hostname}";
-          };
-        } // (optionalAttrs (elem hostname gameSiteHosts) {
-          # Standalone static-site profile. Activation links the current
-          # bundle into the path nginx serves (/srv/www/games) and reloads
-          # nginx -- it never restarts sshd, so magic-rollback health checks
-          # pass on a live deploy (no --boot needed). The interpolated store
-          # path keeps the bundle in the profile closure, so it is copied to
-          # the host and pinned as a GC root. Target it alone with
-          # `.#deploy.<host>.game-site`.
-          game-site = {
-            user = "root";
-            profilePath = "/nix/var/nix/profiles/game-site";
-            path = deploy-rs.lib.x86_64-linux.activate.custom gameSitePackage ''
-              mkdir -p /srv/www
-              ln -sfn ${gameSitePackage} /srv/www/games
-              systemctl reload nginx
-            '';
-          };
-        });
-      }) nodeEntities;
+          profiles = {
+            system = {
+              user = "root";
+              path = deploy-rs.lib.x86_64-linux.activate.nixos
+                fudo-nixos.nixosConfigurations."${hostname}";
+            };
+          } // extraProfiles;
+        }) nodeEntities;
 
       domains = fudo-entities.entities.domains;
       sites = fudo-entities.entities.sites;
