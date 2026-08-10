@@ -588,11 +588,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1785874940,
-        "narHash": "sha256-uuwNrx8lOb/w2TUllumBSyW/3eH8Zx5An0ZgD8slPHY=",
+        "lastModified": 1786220854,
+        "narHash": "sha256-/b79w+zO/+sJ1ADXUfkemP+0kBV+HPxmZVY7xlPI2ag=",
         "owner": "serokell",
         "repo": "deploy-rs",
-        "rev": "5059116c0bae73dbd9277cbc340f5b8a21ccaaa9",
+        "rev": "4dcc87bbf8b3e63ecbe2bf3bb77d729ced7d91d8",
         "type": "github"
       },
       "original": {
@@ -1433,11 +1433,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785709234,
-        "narHash": "sha256-gamZn+Vcn9/1R89l1qle4suABp+X/Q7LM8mns4iZ4sQ=",
+        "lastModified": 1786337366,
+        "narHash": "sha256-NisPfjB2CYLfUO7c4JkGHjmvZJJFiWC7pS9Yvjsgwm8=",
         "ref": "refs/heads/master",
-        "rev": "a55f992a64c01207cd0bb970418c985cd1e84e9e",
-        "revCount": 387,
+        "rev": "03c2175de27b86cd7a242c85e2216a71d1e07744",
+        "revCount": 392,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-entities"
       },
@@ -1558,11 +1558,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1785875757,
-        "narHash": "sha256-nhSztFE8adPHHiJ4XVHVS8kMpOuTxsnNNRDBK9YnGrE=",
+        "lastModified": 1786338620,
+        "narHash": "sha256-QyViYl+7O/MWB/dcGWAb6bW+W6t66HMFlIfnHxi69oo=",
         "owner": "fudoniten",
         "repo": "nixos-config",
-        "rev": "afeec4aa235696ae034286ac8d9f47f5117dbd4a",
+        "rev": "67d5a5e1b050521fec287d29866395d414305c8e",
         "type": "github"
       },
       "original": {
@@ -3319,11 +3319,11 @@
     },
     "nixpkgs_24": {
       "locked": {
-        "lastModified": 1785734586,
-        "narHash": "sha256-rBYNiK4XmVxmJaK40DRnmoPUpCeRXJ4DJdQ/DW2LQRU=",
-        "rev": "531670d871c0e29724a02f3cbcac170adc65b58c",
+        "lastModified": 1786201459,
+        "narHash": "sha256-nGjEsy0fPEsb9MAf3eBeu6YvJV9TwY9hDgo3M/ANi24=",
+        "rev": "8b8c811c7c2541c30382c5de7ed26be055569c60",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.6815.531670d871c0/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.7273.8b8c811c7c25/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
