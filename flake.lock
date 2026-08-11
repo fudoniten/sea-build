@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786121523,
-        "narHash": "sha256-U/MAVNb2BV+/8+KCsCTjMZ8mh7gVO/E85E2MlyK9GZI=",
+        "lastModified": 1786385690,
+        "narHash": "sha256-/Z1bkrlam2DvmXchvRB5m9W/G6jcU4Yyj0pHZsxh2QU=",
         "owner": "fudoniten",
         "repo": "aegis",
-        "rev": "7c10f5467ec805a17f1f0aa8a66757bce3599441",
+        "rev": "c6df67d61ee229ec40e8be501a64db56ad54aa94",
         "type": "github"
       },
       "original": {
@@ -24,11 +24,11 @@
     "aegis-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1786125180,
-        "narHash": "sha256-YF6PcFaeq6msGXcmsmAYVxg/5XLpShqjOcM5VTcYiAg=",
+        "lastModified": 1786414702,
+        "narHash": "sha256-4Aa81JsHmO8HtK2LjRbjmcFUbgxaoelxhL5HWDnW1gU=",
         "owner": "fudoniten",
         "repo": "aegis-secrets",
-        "rev": "abe5a2efdfb6e756ea7094897573811e1b168229",
+        "rev": "af1957df308cafdb164826a6c28bdc0de6f30cda",
         "type": "github"
       },
       "original": {
@@ -827,11 +827,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786356557,
-        "narHash": "sha256-d3FqeM5bfyCvMmdygrQ+stj0MKq/T8O1+NdIHMsspzs=",
+        "lastModified": 1786415256,
+        "narHash": "sha256-3GTx7nUbf+sIlmZb+ZjZLSFcTKKtFQm8jNPUhgHMFXg=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "c450874f05714ba7229a4c4e7b9a80da1dafc3c2",
+        "rev": "db30732178e1e91f2240386bbd44b2fd529e567a",
         "type": "github"
       },
       "original": {
@@ -1502,11 +1502,11 @@
     },
     "fudo-lib_3": {
       "locked": {
-        "lastModified": 1784497379,
-        "narHash": "sha256-T4gY1btf8LpBQFJaY+rBgWASbOMvvdRhNwA+g8P3vFU=",
+        "lastModified": 1786422761,
+        "narHash": "sha256-6/rwxGln4GXoWImQS9U8jWXZD85vkySixM/RVSe/h34=",
         "owner": "fudoniten",
         "repo": "fudo-nix-lib",
-        "rev": "f58ecc6e07efa700c9f100a76684283a3b67eefd",
+        "rev": "1fe0f38ab80d58e847ab858b99765c1b07abe494",
         "type": "github"
       },
       "original": {
@@ -1558,11 +1558,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1786414775,
-        "narHash": "sha256-voKLtbUAO1S+3b4ibeCWFZlMvgIaMdEpBSyPto9nsAU=",
+        "lastModified": 1786427903,
+        "narHash": "sha256-s2adiG1RxQ4azmiYdPDuKI6o6JHQi8C//+4SQViN/Jc=",
         "owner": "fudoniten",
         "repo": "nixos-config",
-        "rev": "fe1bc99cba26a911ca490a12d7530fc4b25243d6",
+        "rev": "181f4308a07499c83c7247ad63eccad0b186375a",
         "type": "github"
       },
       "original": {
@@ -1653,8 +1653,8 @@
         "utils": "utils_11"
       },
       "locked": {
-        "lastModified": 1786339896,
-        "narHash": "sha256-W0ZgiinUtH/p9x0q0RjfnqR+w4b2EyX+8MNTLtTdw+I=",
+        "lastModified": 1786396880,
+        "narHash": "sha256-oyvKGqR4hK5WpwYeIU15Lqs2/QbOa/yWPRSZ3qgRySc=",
         "path": "/secrets",
         "type": "path"
       },
@@ -2564,8 +2564,8 @@
     "nexus-keys": {
       "flake": false,
       "locked": {
-        "lastModified": 1752454078,
-        "narHash": "sha256-A2Q1mZzel1rLALpRTqu8Ezfy6ff3kuS8V4aNGiueDAw=",
+        "lastModified": 1786339861,
+        "narHash": "sha256-Tbnp4iRvOO7NPkBeQ7WH3rmzAgU7EeMdzG5hIRYfpm0=",
         "path": "/secrets/nexus-keys",
         "type": "path"
       },
@@ -3080,11 +3080,11 @@
     },
     "nixpkgsUnstable_2": {
       "locked": {
-        "lastModified": 1786106723,
-        "narHash": "sha256-CgKDSHL6rqAAQkkvg1xaZDQXb77+4XW73iGcUMJ+2w0=",
-        "rev": "f13ff45afd1bb73e640eaa08a7066dbed07e3238",
+        "lastModified": 1786247143,
+        "narHash": "sha256-qemNveuexlWhK0Qc6Y8o+gtSVTIj5xljzTAXQZxTHWA=",
+        "rev": "279b4a8275f032c566576b3f181fa0f27197f588",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1049422.f13ff45afd1b/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1050399.279b4a8275f0/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
@@ -3636,8 +3636,8 @@
     "ssh-keypairs": {
       "flake": false,
       "locked": {
-        "lastModified": 1752454077,
-        "narHash": "sha256-3ZiTBY5hwGir/IF4Vw/moLt4ooRLcXOsRZM/Uvv+x64=",
+        "lastModified": 1786339856,
+        "narHash": "sha256-m3Zm0tyTINR6AEB77rWkGnMQMj6Vb2GgNB5zUtI+ruw=",
         "path": "/secrets/ssh-keypairs",
         "type": "path"
       },
