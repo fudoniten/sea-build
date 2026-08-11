@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786385690,
-        "narHash": "sha256-/Z1bkrlam2DvmXchvRB5m9W/G6jcU4Yyj0pHZsxh2QU=",
+        "lastModified": 1786478442,
+        "narHash": "sha256-EIHXpB2dJRAJyTJWitTX50qZ5EqwtgkM1mSMRdspA1w=",
         "owner": "fudoniten",
         "repo": "aegis",
-        "rev": "c6df67d61ee229ec40e8be501a64db56ad54aa94",
+        "rev": "93b43a970a1643968c192fa8d9408853f130d2af",
         "type": "github"
       },
       "original": {
@@ -24,11 +24,11 @@
     "aegis-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1786414702,
-        "narHash": "sha256-4Aa81JsHmO8HtK2LjRbjmcFUbgxaoelxhL5HWDnW1gU=",
+        "lastModified": 1786479023,
+        "narHash": "sha256-zfTeQByqM4x5F7VwYjIW3d9RgRuxFhu9m9eCKFrse1M=",
         "owner": "fudoniten",
         "repo": "aegis-secrets",
-        "rev": "af1957df308cafdb164826a6c28bdc0de6f30cda",
+        "rev": "8d68676f8a96f7f3c5b22547f26982b52fb2cffd",
         "type": "github"
       },
       "original": {
@@ -1433,11 +1433,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786461967,
-        "narHash": "sha256-cU4K7xT/LR9ZxcmEHacUtkNMVni/f2FsOyFQerU8ulA=",
+        "lastModified": 1786471831,
+        "narHash": "sha256-NHfFWERIU75zWhLhsNqEYs0r/t9jNN+qocGDKy+cJ/s=",
         "ref": "refs/heads/master",
-        "rev": "806452fa4b606c42ed2d65343d3e380f8c5ebc78",
-        "revCount": 400,
+        "rev": "f14219359f1fa2bb5d7f587946af6e9ed4e78623",
+        "revCount": 403,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-entities"
       },
@@ -1558,11 +1558,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1786462011,
-        "narHash": "sha256-0sTW4GyMs+dlDJa/EVQ1ODeYLQUZfjDW8lFlLJ3TRSk=",
+        "lastModified": 1786479140,
+        "narHash": "sha256-UNuRLu5uTD3d1jf195mXCYE61UW5x4Jxmp/GDeVLCOU=",
         "owner": "fudoniten",
         "repo": "nixos-config",
-        "rev": "2160524662a338363a66e5bc1c05bec0f7dbd35e",
+        "rev": "49e9d7202e4fcfab1e4afdd5d7cd99494485a3ed",
         "type": "github"
       },
       "original": {
