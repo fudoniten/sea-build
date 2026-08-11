@@ -1433,11 +1433,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786388666,
-        "narHash": "sha256-WDeI3jj/8DQT053upK6/bwujBrghXFIAVsCmMx9zM3c=",
+        "lastModified": 1786414553,
+        "narHash": "sha256-1m+N+Q4z+NtkzNwXjzRTVRCjKWd8BeQdSMMpIZ3DLT0=",
         "ref": "refs/heads/master",
-        "rev": "10bc659f901585731bfabc2e90acfc2d8450dcea",
-        "revCount": 395,
+        "rev": "23ca6fd75934a676eceaaeba3e750335ee1cce61",
+        "revCount": 399,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-entities"
       },
@@ -1558,11 +1558,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1786380996,
-        "narHash": "sha256-dNo0bUrPrsBbh8OQEPPp6imMs1jxUping25+WRu7i34=",
+        "lastModified": 1786414775,
+        "narHash": "sha256-voKLtbUAO1S+3b4ibeCWFZlMvgIaMdEpBSyPto9nsAU=",
         "owner": "fudoniten",
         "repo": "nixos-config",
-        "rev": "3fd1376f39a3fa89c5a9c0578e96507e6e693543",
+        "rev": "fe1bc99cba26a911ca490a12d7530fc4b25243d6",
         "type": "github"
       },
       "original": {
