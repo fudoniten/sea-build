@@ -1558,11 +1558,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1786575992,
-        "narHash": "sha256-1GmNzGzsMMaB9tm0H+qrzcAAZoj4Ane7F1R6P/jjjg8=",
+        "lastModified": 1786581468,
+        "narHash": "sha256-IooVfTVc9TRBMUiN8EsWSvzLVD7AUkaFf+GaOihTMDs=",
         "owner": "fudoniten",
         "repo": "nixos-config",
-        "rev": "80e55b32204bc55c3040ce0ae030750793222f3e",
+        "rev": "d1e342cccc5415e5759707842890fb27d81438da",
         "type": "github"
       },
       "original": {
