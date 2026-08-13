@@ -827,11 +827,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786556724,
-        "narHash": "sha256-8GdpQahqrldtU+gAsW7m9hLvcdfpFVcl92vzO00yV3o=",
+        "lastModified": 1786585960,
+        "narHash": "sha256-tUtlR9q9dsQ4s8Mwzh2vtze+eZPMcvgm5A6Jg4r7J20=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "fd1bf4ef5fb371a91fc38611bc6944b05c125c59",
+        "rev": "d1cdfb0655b3d47ea1338f1a5d81afe39a12d5a9",
         "type": "github"
       },
       "original": {
@@ -1433,11 +1433,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786572840,
-        "narHash": "sha256-bTPtN7s4SkHOe/oHdsMB+Zw3wKJm0At6a6UzeVAgsAo=",
+        "lastModified": 1786584867,
+        "narHash": "sha256-oTMNLtJnum6hmERNT/M/tPLRYGuVDq+FDKRxxozUdpk=",
         "ref": "refs/heads/master",
-        "rev": "a94e69fd9ffa66e75f09bb50e501c506baf52f2d",
-        "revCount": 416,
+        "rev": "19d36417b579ecf3427d8e1683c37734a296abd0",
+        "revCount": 418,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-entities"
       },
@@ -1558,11 +1558,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1786581468,
-        "narHash": "sha256-IooVfTVc9TRBMUiN8EsWSvzLVD7AUkaFf+GaOihTMDs=",
+        "lastModified": 1786587340,
+        "narHash": "sha256-BxJ0+RU95yKm9m3r/Xo5NiYnzNTy4rg2fAc1ZY9OEx4=",
         "owner": "fudoniten",
         "repo": "nixos-config",
-        "rev": "d1e342cccc5415e5759707842890fb27d81438da",
+        "rev": "553e94293539e464c9bbd94fd467e9396e3b3141",
         "type": "github"
       },
       "original": {
@@ -1653,8 +1653,8 @@
         "utils": "utils_11"
       },
       "locked": {
-        "lastModified": 1786396880,
-        "narHash": "sha256-oyvKGqR4hK5WpwYeIU15Lqs2/QbOa/yWPRSZ3qgRySc=",
+        "lastModified": 1786587144,
+        "narHash": "sha256-Whst2FBM9nS0k2Q6/Lg8Dsct+KhNGa7YQeXo5d/Ilko=",
         "path": "/secrets",
         "type": "path"
       },
@@ -3319,11 +3319,11 @@
     },
     "nixpkgs_24": {
       "locked": {
-        "lastModified": 1786430034,
-        "narHash": "sha256-1MqAfG80fHLnWolvR3ULsMsXwMKFIJaWob8OI9yRcB0=",
-        "rev": "70cc4559b10a6062b05ff1af17e0add065ccaed9",
+        "lastModified": 1786535285,
+        "narHash": "sha256-wu478baUvGLzcIMCGz8eKqSJa2uzjoUGpYSh/LTXtxo=",
+        "rev": "9f78f44a87948854445dae0b6bf82b2e87e4efb5",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.7443.70cc4559b10a/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.7526.9f78f44a8794/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
