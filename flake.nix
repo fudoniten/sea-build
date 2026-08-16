@@ -94,8 +94,18 @@
           deploy = {
             type = "app";
             program = toString (pkgs.writeShellScript "deploy" ''
-              exec ${deploy-rs-bin} ".#''${1:?usage: nix run .#deploy -- <hostname>}"
+              host="''${1:?usage: nix run .#deploy -- <hostname> [deploy-rs flags...]}"
+              shift
+              exec ${deploy-rs-bin} ".#$host" "$@"
             '');
+            meta = {
+              description = "Deploy to a host via deploy-rs";
+              longDescription = ''
+                Invokes deploy-rs against `.#<hostname>`, forwarding any remaining
+                arguments. Useful flags include `-s`/`--skip-checks` and `--boot`
+                (defer activation until the next reboot).
+              '';
+            };
           };
         };
 
