@@ -1508,8 +1508,8 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1786900806,
-        "narHash": "sha256-emoJYwLMuZIc1tK1msVSC5Z0SxgTFxIt5314S1zQf+c=",
+        "lastModified": 1786901169,
+        "narHash": "sha256-dN9lpzSjsnpVpLzg0WRgec1nzfRGHTVW5NISP+3c0/A=",
         "path": "/state/deploy/nixos-config",
         "type": "path"
       },
