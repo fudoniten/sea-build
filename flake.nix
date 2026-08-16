@@ -88,7 +88,17 @@
 
     in utils.lib.eachDefaultSystem (system:
       let pkgs = import nixpkgs { inherit system; };
+          deploy-rs-bin = "${deploy-rs.packages."${system}".deploy-rs}/bin/deploy-rs";
       in {
+        apps = {
+          deploy = {
+            type = "app";
+            program = toString (pkgs.writeShellScript "deploy" ''
+              exec ${deploy-rs-bin} ".#''${1:?usage: nix run .#deploy -- <hostname>}"
+            '');
+          };
+        };
+
         devShells = rec {
           default = deploy;
           deploy = pkgs.mkShell {
