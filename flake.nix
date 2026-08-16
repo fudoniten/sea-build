@@ -9,7 +9,7 @@
     utils.url = "github:numtide/flake-utils";
 
     fudo-nixos = {
-      url = "github:fudoniten/nixos-config/26.05";
+      url = "path:/state/deploy/nixos-config";
       inputs = {
         fudo-entities.follows = "fudo-entities";
         nixpkgs.follows = "nixpkgs";
@@ -88,7 +88,7 @@
 
     in utils.lib.eachDefaultSystem (system:
       let pkgs = import nixpkgs { inherit system; };
-          deploy-rs-bin = "${deploy-rs.packages."${system}".deploy-rs}/bin/deploy-rs";
+          deploy-rs-bin = "${deploy-rs.packages."${system}".deploy-rs}/bin/deploy";
       in {
         apps = {
           deploy = {

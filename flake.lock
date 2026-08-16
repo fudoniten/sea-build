@@ -24,11 +24,11 @@
     "aegis-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1786575936,
-        "narHash": "sha256-VyL02WrB5KShH8JhoQlJigxiSS7+NFPeImbdmcRUGUQ=",
+        "lastModified": 1786765814,
+        "narHash": "sha256-mQxoJLGqB0OZEBIaR5uiQ4DJV2WbpeLgDSWTv1NBGxQ=",
         "owner": "fudoniten",
         "repo": "aegis-secrets",
-        "rev": "5a05cbcba7d4bcabb30793e6c0b47c116eef7e75",
+        "rev": "20b75a77e79a97162dad31cb7d04852efba857cc",
         "type": "github"
       },
       "original": {
@@ -43,30 +43,6 @@
         "haskell-flake": "haskell-flake",
         "nixpkgs": [
           "fudo-nixos",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1770259557,
-        "narHash": "sha256-EvZ09k9+mzXAngPzU2K7oLLUDlKoT1numb4bDb3Gtl4=",
-        "owner": "hercules-ci",
-        "repo": "arion",
-        "rev": "9b24cf65c72cb0e9616e437d55e1ac8e5c6bc715",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "arion",
-        "type": "github"
-      }
-    },
-    "arion_2": {
-      "inputs": {
-        "flake-parts": "flake-parts_4",
-        "haskell-flake": "haskell-flake_2",
-        "nixpkgs": [
-          "fudo-nixos",
-          "grafana-module",
           "nixpkgs"
         ]
       },
@@ -202,8 +178,8 @@
     "blobs": {
       "flake": false,
       "locked": {
-        "lastModified": 1720154532,
-        "narHash": "sha256-Eq2z4DLMhKWWtRtKLuA2wA6i/+TTdL7v2g7q1wv5OOQ=",
+        "lastModified": 1786684100,
+        "narHash": "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=",
         "path": "/secrets/blobs",
         "type": "path"
       },
@@ -215,8 +191,8 @@
     "build-seed": {
       "flake": false,
       "locked": {
-        "lastModified": 1684298635,
-        "narHash": "sha256-6rzGK/itD/RBRoNGw1L2wLV1IcVbn2b0V49ay1J9z7k=",
+        "lastModified": 1786684349,
+        "narHash": "sha256-7j/yBxzgpcIOa56kJYZSjsndDKbPIguC/FwwOd34SjM=",
         "path": "/secrets/build.seed",
         "type": "path"
       },
@@ -776,8 +752,8 @@
     "dnssec-ksks": {
       "flake": false,
       "locked": {
-        "lastModified": 1724469749,
-        "narHash": "sha256-eZO2QemWxUfM1UXT5iCn8+2rpf4m7MRQt4OvF9PEb/Q=",
+        "lastModified": 1786684117,
+        "narHash": "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=",
         "path": "/secrets/dnssec",
         "type": "path"
       },
@@ -789,8 +765,8 @@
     "domain-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1778652688,
-        "narHash": "sha256-FNvyFzJd9jCNZZk5IoC8s4AQICfYBxySNfRJU+r5t/o=",
+        "lastModified": 1786684124,
+        "narHash": "sha256-rJr1yTsoAopo5AEIut2ioWL6tO2kBeA3wwwFf3LxBj0=",
         "path": "/secrets/domain-secrets",
         "type": "path"
       },
@@ -827,11 +803,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786585960,
-        "narHash": "sha256-tUtlR9q9dsQ4s8Mwzh2vtze+eZPMcvgm5A6Jg4r7J20=",
+        "lastModified": 1786813903,
+        "narHash": "sha256-W6gQXfzOHqrfyd97Bx/lk2BjChHF2GOm5i7fhw/HQC8=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "d1cdfb0655b3d47ea1338f1a5d81afe39a12d5a9",
+        "rev": "4491e1243fb8e73e4f163a800d852523b2fbb24c",
         "type": "github"
       },
       "original": {
@@ -843,8 +819,8 @@
     "filesystem-keys": {
       "flake": false,
       "locked": {
-        "lastModified": 1684298634,
-        "narHash": "sha256-K2wdsA4vcNTaLR9A9qxB+aMaeANL0LXOwBWvUm63lX0=",
+        "lastModified": 1786684133,
+        "narHash": "sha256-LNM0yMF/f11Gl3iatJUXQ3SXQ9tsw1MLqsAdlyFSMag=",
         "path": "/secrets/filesystem-keys",
         "type": "path"
       },
@@ -1019,24 +995,6 @@
         "type": "github"
       }
     },
-    "flake-parts_10": {
-      "inputs": {
-        "nixpkgs-lib": "nixpkgs-lib_7"
-      },
-      "locked": {
-        "lastModified": 1719745305,
-        "narHash": "sha256-xwgjVUpqSviudEkpQnioeez1Uo2wzrsMaJKJClh+Bls=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "c3c5ecc05edc7dafba779c6c1a61cd08ac6583e9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "type": "github"
-      }
-    },
     "flake-parts_2": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -1075,29 +1033,6 @@
     },
     "flake-parts_4": {
       "inputs": {
-        "nixpkgs-lib": [
-          "fudo-nixos",
-          "grafana-module",
-          "arion",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1769996383,
-        "narHash": "sha256-AnYjnFWgS49RlqX7LrC4uA+sCCDBj0Ry/WOJ5XWAsa0=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "57928607ea566b5db3ad13af0e57e921e6b12381",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "type": "github"
-      }
-    },
-    "flake-parts_5": {
-      "inputs": {
         "nixpkgs-lib": "nixpkgs-lib_3"
       },
       "locked": {
@@ -1114,7 +1049,7 @@
         "type": "github"
       }
     },
-    "flake-parts_6": {
+    "flake-parts_5": {
       "inputs": {
         "nixpkgs-lib": [
           "fudo-nixos",
@@ -1137,7 +1072,7 @@
         "type": "github"
       }
     },
-    "flake-parts_7": {
+    "flake-parts_6": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib_4"
       },
@@ -1155,7 +1090,7 @@
         "type": "github"
       }
     },
-    "flake-parts_8": {
+    "flake-parts_7": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib_5"
       },
@@ -1173,9 +1108,27 @@
         "type": "github"
       }
     },
-    "flake-parts_9": {
+    "flake-parts_8": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib_6"
+      },
+      "locked": {
+        "lastModified": 1719745305,
+        "narHash": "sha256-xwgjVUpqSviudEkpQnioeez1Uo2wzrsMaJKJClh+Bls=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "c3c5ecc05edc7dafba779c6c1a61cd08ac6583e9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_9": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib_7"
       },
       "locked": {
         "lastModified": 1719745305,
@@ -1433,11 +1386,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786584867,
-        "narHash": "sha256-oTMNLtJnum6hmERNT/M/tPLRYGuVDq+FDKRxxozUdpk=",
+        "lastModified": 1786815188,
+        "narHash": "sha256-g8k1KxvG/34Tsf9W9lC4/J29sTMK0FV4zeiF4TguMxU=",
         "ref": "refs/heads/master",
-        "rev": "19d36417b579ecf3427d8e1683c37734a296abd0",
-        "revCount": 418,
+        "rev": "54de5fe9fe0573b2467454e716dbfc41887401ec",
+        "revCount": 424,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-entities"
       },
@@ -1532,7 +1485,6 @@
         "fudo-lib": "fudo-lib_3",
         "fudo-pkgs": "fudo-pkgs",
         "fudo-secrets": "fudo-secrets",
-        "grafana-module": "grafana-module",
         "home-assistant-container": "home-assistant-container",
         "home-manager-config": "home-manager-config",
         "immich-container": "immich-container",
@@ -1540,8 +1492,6 @@
         "klaxon": "klaxon",
         "kubernetes-cluster": "kubernetes-cluster",
         "kwickchat": "kwickchat",
-        "lemmy-container": "lemmy-container",
-        "lemmy-docker": "lemmy-docker",
         "mail-server": "mail-server",
         "mastodon-container": "mastodon-container",
         "matrix-module": "matrix-module",
@@ -1558,18 +1508,14 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1786587340,
-        "narHash": "sha256-BxJ0+RU95yKm9m3r/Xo5NiYnzNTy4rg2fAc1ZY9OEx4=",
-        "owner": "fudoniten",
-        "repo": "nixos-config",
-        "rev": "553e94293539e464c9bbd94fd467e9396e3b3141",
-        "type": "github"
+        "lastModified": 1786861300,
+        "narHash": "sha256-k9JerlgU1yJGpmqyNwI6E9O9w1au//94hpir+ObXNUU=",
+        "path": "/state/deploy/nixos-config",
+        "type": "path"
       },
       "original": {
-        "owner": "fudoniten",
-        "ref": "26.05",
-        "repo": "nixos-config",
-        "type": "github"
+        "path": "/state/deploy/nixos-config",
+        "type": "path"
       }
     },
     "fudo-pkgs": {
@@ -1653,8 +1599,8 @@
         "utils": "utils_11"
       },
       "locked": {
-        "lastModified": 1786587144,
-        "narHash": "sha256-Whst2FBM9nS0k2Q6/Lg8Dsct+KhNGa7YQeXo5d/Ilko=",
+        "lastModified": 1786685252,
+        "narHash": "sha256-KLMqW+CrVxhfIIjYmPN1H4M8365A9zGxL6SWw52J6Y4=",
         "path": "/secrets",
         "type": "path"
       },
@@ -1951,45 +1897,7 @@
         "type": "github"
       }
     },
-    "grafana-module": {
-      "inputs": {
-        "arion": "arion_2",
-        "nixpkgs": [
-          "fudo-nixos",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1770795560,
-        "narHash": "sha256-GPStQh0j+27C5YUsNjFVkClKVjuQRNIygniYN3exWgI=",
-        "owner": "fudoniten",
-        "repo": "grafana-nix-module",
-        "rev": "20fafbc4d0f23282dfe3ac34ba675115a7b8b485",
-        "type": "github"
-      },
-      "original": {
-        "owner": "fudoniten",
-        "repo": "grafana-nix-module",
-        "type": "github"
-      }
-    },
     "haskell-flake": {
-      "locked": {
-        "lastModified": 1675296942,
-        "narHash": "sha256-u1X1sblozi5qYEcLp1hxcyo8FfDHnRUVX3dJ/tW19jY=",
-        "owner": "srid",
-        "repo": "haskell-flake",
-        "rev": "c2cafce9d57bfca41794dc3b99c593155006c71e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "srid",
-        "ref": "0.1.0",
-        "repo": "haskell-flake",
-        "type": "github"
-      }
-    },
-    "haskell-flake_2": {
       "locked": {
         "lastModified": 1675296942,
         "narHash": "sha256-u1X1sblozi5qYEcLp1hxcyo8FfDHnRUVX3dJ/tW19jY=",
@@ -2377,56 +2285,6 @@
         "type": "github"
       }
     },
-    "lemmy-container": {
-      "inputs": {
-        "arion": [
-          "fudo-nixos",
-          "arion"
-        ],
-        "nixpkgs": [
-          "fudo-nixos",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1706310379,
-        "narHash": "sha256-VkHnaPBpkWoMCl4xtnfyxdOECwporks/fzcznWs1/VQ=",
-        "owner": "fudoniten",
-        "repo": "lemmy-nix-container",
-        "rev": "555a3eff5fc3cea4d8d214b08a2e140cd89f1853",
-        "type": "github"
-      },
-      "original": {
-        "owner": "fudoniten",
-        "repo": "lemmy-nix-container",
-        "type": "github"
-      }
-    },
-    "lemmy-docker": {
-      "inputs": {
-        "arion": [
-          "fudo-nixos",
-          "arion"
-        ],
-        "nixpkgs": [
-          "fudo-nixos",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1711218337,
-        "narHash": "sha256-10zQ1PqBIKUc6WaFy6LeYVyzkDlaQO9JcNSZiWOY9D8=",
-        "owner": "fudoniten",
-        "repo": "lemmy-container",
-        "rev": "a13915b47f8f8f80b1bceef43d520dd86fa11f66",
-        "type": "github"
-      },
-      "original": {
-        "owner": "fudoniten",
-        "repo": "lemmy-container",
-        "type": "github"
-      }
-    },
     "mail-server": {
       "inputs": {
         "arion": [
@@ -2551,8 +2409,8 @@
     "nexus-challenge-keys": {
       "flake": false,
       "locked": {
-        "lastModified": 1725757810,
-        "narHash": "sha256-YhCHpwJwbEJOvgrISaZh+xUCw/8K62SJbOay9/WXZ9k=",
+        "lastModified": 1786684200,
+        "narHash": "sha256-0DAWwf7+6fpN9Fs/KRWqTbO5Q6+cc9R90CbOt09dDuQ=",
         "path": "/secrets/nexus-challenge-keys",
         "type": "path"
       },
@@ -2564,8 +2422,8 @@
     "nexus-keys": {
       "flake": false,
       "locked": {
-        "lastModified": 1786339861,
-        "narHash": "sha256-Tbnp4iRvOO7NPkBeQ7WH3rmzAgU7EeMdzG5hIRYfpm0=",
+        "lastModified": 1786684276,
+        "narHash": "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=",
         "path": "/secrets/nexus-keys",
         "type": "path"
       },
@@ -2667,7 +2525,7 @@
     },
     "nix-fetcher-data_3": {
       "inputs": {
-        "flake-parts": "flake-parts_5",
+        "flake-parts": "flake-parts_4",
         "nixpkgs": [
           "fudo-nixos",
           "home-manager-config",
@@ -2693,7 +2551,7 @@
     },
     "nix-fetcher-data_4": {
       "inputs": {
-        "flake-parts": "flake-parts_7",
+        "flake-parts": "flake-parts_6",
         "nixpkgs": [
           "fudo-nixos",
           "klaxon",
@@ -2719,7 +2577,7 @@
     },
     "nix-fetcher-data_5": {
       "inputs": {
-        "flake-parts": "flake-parts_8",
+        "flake-parts": "flake-parts_7",
         "nixpkgs": [
           "fudo-nixos",
           "klaxon",
@@ -2744,7 +2602,7 @@
     },
     "nix-fetcher-data_6": {
       "inputs": {
-        "flake-parts": "flake-parts_9",
+        "flake-parts": "flake-parts_8",
         "nixpkgs": [
           "fudo-nixos",
           "klaxon",
@@ -2770,7 +2628,7 @@
     },
     "nix-fetcher-data_7": {
       "inputs": {
-        "flake-parts": "flake-parts_10",
+        "flake-parts": "flake-parts_9",
         "nixpkgs": [
           "fudo-nixos",
           "nexus",
@@ -2950,11 +2808,11 @@
         "nixpkgs": "nixpkgs_23"
       },
       "locked": {
-        "lastModified": 1786528975,
-        "narHash": "sha256-8KuasCs+mVQ7WbLONUf/QB7NZeQvovyXRyxAj4nOOzY=",
+        "lastModified": 1786717298,
+        "narHash": "sha256-asdPlqtM0AweQ5YNLad6eY4tSYW55YNr1uyayf7mOMQ=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "3e7edd9afe17e45521300e041c65de3015f4a302",
+        "rev": "2dda192987ab6815e44df0130f03d6c907b79134",
         "type": "github"
       },
       "original": {
@@ -3080,11 +2938,11 @@
     },
     "nixpkgsUnstable_2": {
       "locked": {
-        "lastModified": 1786384358,
-        "narHash": "sha256-OETwiymkMwunF+pfL25DzLMF2/YpMcJUjVd9qZ0YdsM=",
-        "rev": "2fcb964de67fcf60b43471c55d5d99e61a9ccb5a",
+        "lastModified": 1786599213,
+        "narHash": "sha256-yjGG65gA1jORt0hWxjzrnw3AYkIn8EWolp8vezwXZ3I=",
+        "rev": "0e251e24a4f24e036a084b6b4b2d2491af4167f4",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1051473.2fcb964de67f/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1053317.0e251e24a4f2/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
@@ -3319,11 +3177,11 @@
     },
     "nixpkgs_24": {
       "locked": {
-        "lastModified": 1786535285,
-        "narHash": "sha256-wu478baUvGLzcIMCGz8eKqSJa2uzjoUGpYSh/LTXtxo=",
-        "rev": "9f78f44a87948854445dae0b6bf82b2e87e4efb5",
+        "lastModified": 1786711500,
+        "narHash": "sha256-mB6w7h+UsvxLf3PY6U3hSDVWCfmn2Q6VtSw5JugbeY0=",
+        "rev": "02e08985a27c65ffd33d434eeb2e660a2e4dc84d",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.7526.9f78f44a8794/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.7675.02e08985a27c/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
@@ -3597,8 +3455,8 @@
     "service-passwords": {
       "flake": false,
       "locked": {
-        "lastModified": 1701451798,
-        "narHash": "sha256-2+ue3o/qKM0tVBkjHy3eLMNFSH/F+nJS39u9fCWAoDg=",
+        "lastModified": 1786684244,
+        "narHash": "sha256-+ziYMXeMljzj9rBm87wpm0CK9ZCe7XOPw7H5+4ZA3dQ=",
         "path": "/secrets/service-passwords",
         "type": "path"
       },
@@ -3610,8 +3468,8 @@
     "service-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1705264542,
-        "narHash": "sha256-7CBc+x58VD5a+7b7LUm0AslGRDuKcYlvScZrDYIC6/s=",
+        "lastModified": 1786684285,
+        "narHash": "sha256-9k6Zfzagx5E7NqpoNX8F2EUv7p0jOYFdv3urzGfhOd0=",
         "path": "/secrets/service-secrets",
         "type": "path"
       },
@@ -3636,8 +3494,8 @@
     "ssh-keypairs": {
       "flake": false,
       "locked": {
-        "lastModified": 1786339856,
-        "narHash": "sha256-m3Zm0tyTINR6AEB77rWkGnMQMj6Vb2GgNB5zUtI+ruw=",
+        "lastModified": 1786684301,
+        "narHash": "sha256-uF/a47zMfQOn0rdpV5pAPK+XxNDoBcO5df+YCXhLL/g=",
         "path": "/secrets/ssh-keypairs",
         "type": "path"
       },
@@ -3653,7 +3511,7 @@
         "base16-helix": "base16-helix",
         "base16-vim": "base16-vim",
         "firefox-gnome-theme": "firefox-gnome-theme",
-        "flake-parts": "flake-parts_6",
+        "flake-parts": "flake-parts_5",
         "gnome-shell": "gnome-shell",
         "nixpkgs": [
           "fudo-nixos",
