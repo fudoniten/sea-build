@@ -9,7 +9,7 @@
     utils.url = "github:numtide/flake-utils";
 
     fudo-nixos = {
-      url = "path:/state/deploy/nixos-config";
+      url = "git+ssh://git@github.com/fudoniten/nixos-config.git?ref=26.05-aegis";
       inputs = {
         fudo-entities.follows = "fudo-entities";
         nixpkgs.follows = "nixpkgs";
