@@ -805,11 +805,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786900609,
-        "narHash": "sha256-t3znBWvJulRCiR1Zok5dD4XpWKFY+JtEpcFljpRqpf8=",
+        "lastModified": 1786929136,
+        "narHash": "sha256-4L0EDoS5Zi/rmw5G6RjzkxZqvrE8Ag1JxrQxMkQ68Yc=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "63e3025aef30a1ed84600ca11adfd7277c2c454a",
+        "rev": "e28f14e5da880b23fe232a9e5d76241831440892",
         "type": "github"
       },
       "original": {
@@ -1510,8 +1510,8 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1786929103,
-        "narHash": "sha256-JGESko9DVuZaY8NK1OjdDsVNkRU/uUobwInLnORYHbA=",
+        "lastModified": 1786929997,
+        "narHash": "sha256-tEzUh07MyWeXLVcyconmT+5/66GolJC3frWmJDLMLA8=",
         "path": "/state/deploy/nixos-config",
         "type": "path"
       },
@@ -1558,11 +1558,11 @@
         "utils": "utils_16"
       },
       "locked": {
-        "lastModified": 1782745345,
-        "narHash": "sha256-vAlV02sVrSUP3Knu8YHOV+y4QpxjMt2Lt8YEQMIh0Vo=",
+        "lastModified": 1786927305,
+        "narHash": "sha256-G9Hw2YuW9hYBJlIg9Wl0DMStAmBXJZQbv2fc+Sraqzs=",
         "owner": "fudoniten",
         "repo": "fudo-nix-pkgs",
-        "rev": "b7928bfbe600199213a8b2a330de2639a736a857",
+        "rev": "250a356fdd148bfe9ba0abc3158af5ea4fbd9731",
         "type": "github"
       },
       "original": {
@@ -2124,11 +2124,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785119570,
-        "narHash": "sha256-Rgs2xKnGLFWQscxUaXX07oyZeuMDOHEbqDOsgliLFGM=",
+        "lastModified": 1786924861,
+        "narHash": "sha256-hftabkb+73OcGzvwFAjCiQorAhprs9TnU1+FkGO5CIw=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d4fd24667c8cbef124bb70a20380cab75ec8474d",
+        "rev": "09ae1b85a6db412d841d60f924b23f881f0d0a38",
         "type": "github"
       },
       "original": {
@@ -2156,11 +2156,11 @@
         "zen-browser": "zen-browser"
       },
       "locked": {
-        "lastModified": 1786925975,
-        "narHash": "sha256-cVxSJ2T49XCF4dXPGPDq7gmnpj4ac/f0XpeSWieQhNQ=",
+        "lastModified": 1786929775,
+        "narHash": "sha256-5a/2vTaDrNkV4rexX/x5dlj/NAMW83Y7lrVCLW85Bto=",
         "owner": "fudoniten",
         "repo": "fudo-nix-home",
-        "rev": "851f6b90e8a1f2123b52fcf1b38ddaaa45f08f0a",
+        "rev": "a48810f44aa9428010a0130dc1ee7e659ef86154",
         "type": "github"
       },
       "original": {
