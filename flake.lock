@@ -178,28 +178,32 @@
     "blobs": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684100,
-        "narHash": "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=",
-        "path": "/secrets/blobs",
+        "path": "./blobs",
         "type": "path"
       },
       "original": {
-        "path": "/secrets/blobs",
+        "path": "./blobs",
         "type": "path"
-      }
+      },
+      "parent": [
+        "fudo-nixos",
+        "fudo-secrets"
+      ]
     },
     "build-seed": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684349,
-        "narHash": "sha256-7j/yBxzgpcIOa56kJYZSjsndDKbPIguC/FwwOd34SjM=",
-        "path": "/secrets/build.seed",
+        "path": "./build.seed",
         "type": "path"
       },
       "original": {
-        "path": "/secrets/build.seed",
+        "path": "./build.seed",
         "type": "path"
-      }
+      },
+      "parent": [
+        "fudo-nixos",
+        "fudo-secrets"
+      ]
     },
     "canon": {
       "inputs": {
@@ -752,28 +756,32 @@
     "dnssec-ksks": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684117,
-        "narHash": "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=",
-        "path": "/secrets/dnssec",
+        "path": "./dnssec",
         "type": "path"
       },
       "original": {
-        "path": "/secrets/dnssec",
+        "path": "./dnssec",
         "type": "path"
-      }
+      },
+      "parent": [
+        "fudo-nixos",
+        "fudo-secrets"
+      ]
     },
     "domain-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684124,
-        "narHash": "sha256-rJr1yTsoAopo5AEIut2ioWL6tO2kBeA3wwwFf3LxBj0=",
-        "path": "/secrets/domain-secrets",
+        "path": "./domain-secrets",
         "type": "path"
       },
       "original": {
-        "path": "/secrets/domain-secrets",
+        "path": "./domain-secrets",
         "type": "path"
-      }
+      },
+      "parent": [
+        "fudo-nixos",
+        "fudo-secrets"
+      ]
     },
     "doom-emacs": {
       "flake": false,
@@ -821,15 +829,17 @@
     "filesystem-keys": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684133,
-        "narHash": "sha256-LNM0yMF/f11Gl3iatJUXQ3SXQ9tsw1MLqsAdlyFSMag=",
-        "path": "/secrets/filesystem-keys",
+        "path": "./filesystem-keys",
         "type": "path"
       },
       "original": {
-        "path": "/secrets/filesystem-keys",
+        "path": "./filesystem-keys",
         "type": "path"
-      }
+      },
+      "parent": [
+        "fudo-nixos",
+        "fudo-secrets"
+      ]
     },
     "firefox-gnome-theme": {
       "flake": false,
@@ -1510,11 +1520,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1786991373,
-        "narHash": "sha256-3/cug8oCtL/TOe4Yagp6X2g6KGXqbkpafFoCxa+XTKE=",
+        "lastModified": 1786992174,
+        "narHash": "sha256-193FwMe4B7+hAJZEiVY4krkax4v9YLhj7WstlIey+WE=",
         "ref": "26.05-aegis",
-        "rev": "17967557a7a11e271f5a47a4067afd170d337c92",
-        "revCount": 1560,
+        "rev": "938d653a3e78f817e187d93a34d75cac2b55d038",
+        "revCount": 1561,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -1605,8 +1615,8 @@
         "utils": "utils_11"
       },
       "locked": {
-        "lastModified": 1786685252,
-        "narHash": "sha256-KLMqW+CrVxhfIIjYmPN1H4M8365A9zGxL6SWw52J6Y4=",
+        "lastModified": 1786992091,
+        "narHash": "sha256-7z84NORQXk3FomAoWnYr5Z/OtTCI151KnwAij01gRp8=",
         "path": "/state/secrets",
         "type": "path"
       },
@@ -2415,28 +2425,32 @@
     "nexus-challenge-keys": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684200,
-        "narHash": "sha256-0DAWwf7+6fpN9Fs/KRWqTbO5Q6+cc9R90CbOt09dDuQ=",
-        "path": "/secrets/nexus-challenge-keys",
+        "path": "./nexus-challenge-keys",
         "type": "path"
       },
       "original": {
-        "path": "/secrets/nexus-challenge-keys",
+        "path": "./nexus-challenge-keys",
         "type": "path"
-      }
+      },
+      "parent": [
+        "fudo-nixos",
+        "fudo-secrets"
+      ]
     },
     "nexus-keys": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684276,
-        "narHash": "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=",
-        "path": "/secrets/nexus-keys",
+        "path": "./nexus-keys",
         "type": "path"
       },
       "original": {
-        "path": "/secrets/nexus-keys",
+        "path": "./nexus-keys",
         "type": "path"
-      }
+      },
+      "parent": [
+        "fudo-nixos",
+        "fudo-secrets"
+      ]
     },
     "nexus_2": {
       "inputs": {
@@ -3461,54 +3475,62 @@
     "service-passwords": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684244,
-        "narHash": "sha256-+ziYMXeMljzj9rBm87wpm0CK9ZCe7XOPw7H5+4ZA3dQ=",
-        "path": "/secrets/service-passwords",
+        "path": "./service-passwords",
         "type": "path"
       },
       "original": {
-        "path": "/secrets/service-passwords",
+        "path": "./service-passwords",
         "type": "path"
-      }
+      },
+      "parent": [
+        "fudo-nixos",
+        "fudo-secrets"
+      ]
     },
     "service-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684285,
-        "narHash": "sha256-9k6Zfzagx5E7NqpoNX8F2EUv7p0jOYFdv3urzGfhOd0=",
-        "path": "/secrets/service-secrets",
+        "path": "./service-secrets",
         "type": "path"
       },
       "original": {
-        "path": "/secrets/service-secrets",
+        "path": "./service-secrets",
         "type": "path"
-      }
+      },
+      "parent": [
+        "fudo-nixos",
+        "fudo-secrets"
+      ]
     },
     "site-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1696448830,
-        "narHash": "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=",
-        "path": "/secrets/site-secrets",
+        "path": "./site-secrets",
         "type": "path"
       },
       "original": {
-        "path": "/secrets/site-secrets",
+        "path": "./site-secrets",
         "type": "path"
-      }
+      },
+      "parent": [
+        "fudo-nixos",
+        "fudo-secrets"
+      ]
     },
     "ssh-keypairs": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684301,
-        "narHash": "sha256-uF/a47zMfQOn0rdpV5pAPK+XxNDoBcO5df+YCXhLL/g=",
-        "path": "/secrets/ssh-keypairs",
+        "path": "./ssh-keypairs",
         "type": "path"
       },
       "original": {
-        "path": "/secrets/ssh-keypairs",
+        "path": "./ssh-keypairs",
         "type": "path"
-      }
+      },
+      "parent": [
+        "fudo-nixos",
+        "fudo-secrets"
+      ]
     },
     "stylix": {
       "inputs": {
