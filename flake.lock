@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786898552,
-        "narHash": "sha256-rrTuqCM7yALUuYYm/oT4Mb8xwEgRznmeaIGL8pBYxis=",
+        "lastModified": 1786928809,
+        "narHash": "sha256-8ldt6doCTrGwsysOuMBKB97OGcHBE11EXlinGwBjrHs=",
         "owner": "fudoniten",
         "repo": "aegis",
-        "rev": "31060a8ccf6904e7f82c6efcb97d257e9805cca7",
+        "rev": "111f8cbcd6576ffc3e3cb1bfdc266d31f22854e6",
         "type": "github"
       },
       "original": {
@@ -1510,8 +1510,8 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1786924956,
-        "narHash": "sha256-DmgMzidkEYNrYW1J3aeWn+AKkCIbNp1NeAbry32/rqQ=",
+        "lastModified": 1786929103,
+        "narHash": "sha256-JGESko9DVuZaY8NK1OjdDsVNkRU/uUobwInLnORYHbA=",
         "path": "/state/deploy/nixos-config",
         "type": "path"
       },
@@ -1530,11 +1530,11 @@
         "utils": "utils_6"
       },
       "locked": {
-        "lastModified": 1782745345,
-        "narHash": "sha256-vAlV02sVrSUP3Knu8YHOV+y4QpxjMt2Lt8YEQMIh0Vo=",
+        "lastModified": 1786927305,
+        "narHash": "sha256-G9Hw2YuW9hYBJlIg9Wl0DMStAmBXJZQbv2fc+Sraqzs=",
         "owner": "fudoniten",
         "repo": "fudo-nix-pkgs",
-        "rev": "b7928bfbe600199213a8b2a330de2639a736a857",
+        "rev": "250a356fdd148bfe9ba0abc3158af5ea4fbd9731",
         "type": "github"
       },
       "original": {
@@ -2156,11 +2156,11 @@
         "zen-browser": "zen-browser"
       },
       "locked": {
-        "lastModified": 1786920213,
-        "narHash": "sha256-O9NpUKQ/JSGZW9I+OCs5vNrEnLbzq/LMfSYC6ZUlOjs=",
+        "lastModified": 1786925975,
+        "narHash": "sha256-cVxSJ2T49XCF4dXPGPDq7gmnpj4ac/f0XpeSWieQhNQ=",
         "owner": "fudoniten",
         "repo": "fudo-nix-home",
-        "rev": "47b94fc54835eba6e9bc2032e713632a4f556b39",
+        "rev": "851f6b90e8a1f2123b52fcf1b38ddaaa45f08f0a",
         "type": "github"
       },
       "original": {
@@ -2274,11 +2274,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786046473,
-        "narHash": "sha256-DlJWPe0bhLENMosgvEA0vcTJ1yhxA3NzF61CxIZk/WY=",
+        "lastModified": 1786925552,
+        "narHash": "sha256-KnUwWYY8uv/MgTrfIvJQhleRcBQJVU750u2rlNQ7BNY=",
         "owner": "fudoniten",
         "repo": "kwickchat",
-        "rev": "6a27b91cfc2c910a89989e5a1b73750ec458f68f",
+        "rev": "ee8eb5f61a297c9a3d87e0c31476fe49ced747c6",
         "type": "github"
       },
       "original": {
