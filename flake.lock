@@ -813,11 +813,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786986926,
-        "narHash": "sha256-+SdYx3wI75AE6/u+OwaAO1IT7pWsif0O2TpEvnRcrpE=",
+        "lastModified": 1787018211,
+        "narHash": "sha256-6l9VDWVP2ePuI/8zSXLY4+50BKJpd1IF1REYKsUoxls=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "2e89533df9375c48448ba92d7299c4d16b46e06f",
+        "rev": "a65bcf36c4d8aa4c5ff51d571f2a2c2555681dad",
         "type": "github"
       },
       "original": {
@@ -1467,11 +1467,11 @@
     },
     "fudo-lib_3": {
       "locked": {
-        "lastModified": 1787003916,
-        "narHash": "sha256-a/0L2J321gsF8m2gsEqxWIdV4h22FXRZtybFKrhyOCM=",
+        "lastModified": 1787021497,
+        "narHash": "sha256-7MZh2B3aO1vAbmGRWUSyntXtgyIjNYH4tZGGL5y98Uo=",
         "owner": "fudoniten",
         "repo": "fudo-nix-lib",
-        "rev": "b64445c7e080d4b7238e3b0f564b5d1aef92860d",
+        "rev": "c88643508b218afdb24287234d80ccbaf0c1ab44",
         "type": "github"
       },
       "original": {
@@ -1520,11 +1520,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1787004000,
-        "narHash": "sha256-Jy2HcYh7ysaQi3QK89BFL6uu7YAtRCEdv9PnGcdCHOA=",
+        "lastModified": 1787021555,
+        "narHash": "sha256-aBjPY2behg6kp+37yAiWylEIhs2NE4hPsD5qPeTPuaA=",
         "ref": "26.05-aegis",
-        "rev": "10ffae6e2868c07b4192b9a9bf21426a2f7fc002",
-        "revCount": 1569,
+        "rev": "979a36e7b16b682cc1b96dd640e28fd70e2a3532",
+        "revCount": 1574,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
