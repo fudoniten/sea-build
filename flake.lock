@@ -813,11 +813,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787104856,
-        "narHash": "sha256-Efjpf6CcgMOChNDFDezU5GoIOJZAYhwMeD01zwMkzjc=",
+        "lastModified": 1787157143,
+        "narHash": "sha256-Pl1nEAbVUufMQ2IsALGype43+EMJPyGytiPuTPeGKz8=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "efba085513b136becbbf4b3ce86291ebecadaac9",
+        "rev": "87b8fb5822c5e509ba6a6d7f040deff15e558627",
         "type": "github"
       },
       "original": {
@@ -1520,11 +1520,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1787114071,
-        "narHash": "sha256-T+wZT+F/iA1yg6l0kwGp/3AZbj/mFFR/EB7xNFixCyg=",
+        "lastModified": 1787158736,
+        "narHash": "sha256-c2GJfG0Nnbc3TEanqNLhJaiqvFX8EXhYlzwleRYeq4w=",
         "ref": "26.05-aegis",
-        "rev": "baf44cb331efaeda81e3c3a67a46138f4efdac28",
-        "revCount": 1584,
+        "rev": "9bca3ce84be7e7412a570f85e7ddb3474073576d",
+        "revCount": 1586,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -1544,11 +1544,11 @@
         "utils": "utils_6"
       },
       "locked": {
-        "lastModified": 1786927305,
-        "narHash": "sha256-G9Hw2YuW9hYBJlIg9Wl0DMStAmBXJZQbv2fc+Sraqzs=",
+        "lastModified": 1787157340,
+        "narHash": "sha256-FAzRfaNPCS3hfDrVdsfu9oHl1PW3e6Jyc/Wrbc8wuB8=",
         "owner": "fudoniten",
         "repo": "fudo-nix-pkgs",
-        "rev": "250a356fdd148bfe9ba0abc3158af5ea4fbd9731",
+        "rev": "2d9ade3bc1e83554364f94f1dde1cfca6cf379e8",
         "type": "github"
       },
       "original": {
@@ -2828,11 +2828,11 @@
         "nixpkgs": "nixpkgs_23"
       },
       "locked": {
-        "lastModified": 1786867632,
-        "narHash": "sha256-ez+ubZlA1RtdjCB18a6zJ9M4u8qoPDy08EcnsW5M3Xw=",
+        "lastModified": 1787144466,
+        "narHash": "sha256-HHfv2/HkNSKbbSyU9iD/g8lbP6r4tl33sSw1W4rXCk0=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "ff17823245ab9ff7bcae6acf950bd89cba82c38c",
+        "rev": "0471accf8d0a8210b31d947497d179ecc99e0021",
         "type": "github"
       },
       "original": {
@@ -3197,11 +3197,11 @@
     },
     "nixpkgs_24": {
       "locked": {
-        "lastModified": 1787042014,
-        "narHash": "sha256-stgzvREl3lC3UYnMU+4ttB1d3acWTzmMryDLEnRi0Ew=",
-        "rev": "c69ae8fb8faeb3472fd11234ba55a70ac3601f9b",
+        "lastModified": 1787101114,
+        "narHash": "sha256-BA7sSNjLDuPGSOYBGpr6WQjke1MQ8AZpJ8GlYZM/mOc=",
+        "rev": "b18a4b905f8d028dc4476412e6d6891728695379",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.7984.c69ae8fb8fae/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.8045.b18a4b905f8d/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
