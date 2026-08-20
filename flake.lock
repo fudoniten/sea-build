@@ -178,8 +178,8 @@
     "blobs": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684100,
-        "narHash": "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=",
+        "lastModified": 1720154532,
+        "narHash": "sha256-Eq2z4DLMhKWWtRtKLuA2wA6i/+TTdL7v2g7q1wv5OOQ=",
         "path": "/secrets/blobs",
         "type": "path"
       },
@@ -191,8 +191,8 @@
     "build-seed": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684349,
-        "narHash": "sha256-7j/yBxzgpcIOa56kJYZSjsndDKbPIguC/FwwOd34SjM=",
+        "lastModified": 1684298635,
+        "narHash": "sha256-6rzGK/itD/RBRoNGw1L2wLV1IcVbn2b0V49ay1J9z7k=",
         "path": "/secrets/build.seed",
         "type": "path"
       },
@@ -752,8 +752,8 @@
     "dnssec-ksks": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684117,
-        "narHash": "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=",
+        "lastModified": 1724469749,
+        "narHash": "sha256-eZO2QemWxUfM1UXT5iCn8+2rpf4m7MRQt4OvF9PEb/Q=",
         "path": "/secrets/dnssec",
         "type": "path"
       },
@@ -765,8 +765,8 @@
     "domain-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684124,
-        "narHash": "sha256-rJr1yTsoAopo5AEIut2ioWL6tO2kBeA3wwwFf3LxBj0=",
+        "lastModified": 1778652688,
+        "narHash": "sha256-FNvyFzJd9jCNZZk5IoC8s4AQICfYBxySNfRJU+r5t/o=",
         "path": "/secrets/domain-secrets",
         "type": "path"
       },
@@ -821,8 +821,8 @@
     "filesystem-keys": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684133,
-        "narHash": "sha256-LNM0yMF/f11Gl3iatJUXQ3SXQ9tsw1MLqsAdlyFSMag=",
+        "lastModified": 1684298634,
+        "narHash": "sha256-K2wdsA4vcNTaLR9A9qxB+aMaeANL0LXOwBWvUm63lX0=",
         "path": "/secrets/filesystem-keys",
         "type": "path"
       },
@@ -1510,11 +1510,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1787261397,
-        "narHash": "sha256-bYw+JDJ09O5CFnTQwJsWvTCfN/ub9oe3m9RVNT3ZWz8=",
+        "lastModified": 1787261613,
+        "narHash": "sha256-ltNPZKygtvuuQLyOHHiQGHASvz72LvLjyhymQpb1JlU=",
         "owner": "fudoniten",
         "repo": "nixos-config",
-        "rev": "0cf477b91666a2b056e13fe12e8eec08c9360869",
+        "rev": "dbe018d9484cc3d7274db9295a93ec4377918bfd",
         "type": "github"
       },
       "original": {
@@ -1605,13 +1605,13 @@
         "utils": "utils_11"
       },
       "locked": {
-        "lastModified": 1786685252,
-        "narHash": "sha256-KLMqW+CrVxhfIIjYmPN1H4M8365A9zGxL6SWw52J6Y4=",
-        "path": "/state/secrets",
+        "lastModified": 1786895689,
+        "narHash": "sha256-7uJcWCzbjg0+gaLdan0zoay+WoRusSYi3iNYJc8jKOY=",
+        "path": "/secrets",
         "type": "path"
       },
       "original": {
-        "path": "/state/secrets",
+        "path": "/secrets",
         "type": "path"
       }
     },
@@ -2415,8 +2415,8 @@
     "nexus-challenge-keys": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684200,
-        "narHash": "sha256-0DAWwf7+6fpN9Fs/KRWqTbO5Q6+cc9R90CbOt09dDuQ=",
+        "lastModified": 1725757810,
+        "narHash": "sha256-YhCHpwJwbEJOvgrISaZh+xUCw/8K62SJbOay9/WXZ9k=",
         "path": "/secrets/nexus-challenge-keys",
         "type": "path"
       },
@@ -2428,8 +2428,8 @@
     "nexus-keys": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684276,
-        "narHash": "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=",
+        "lastModified": 1786339861,
+        "narHash": "sha256-Tbnp4iRvOO7NPkBeQ7WH3rmzAgU7EeMdzG5hIRYfpm0=",
         "path": "/secrets/nexus-keys",
         "type": "path"
       },
@@ -3461,8 +3461,8 @@
     "service-passwords": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684244,
-        "narHash": "sha256-+ziYMXeMljzj9rBm87wpm0CK9ZCe7XOPw7H5+4ZA3dQ=",
+        "lastModified": 1701451798,
+        "narHash": "sha256-2+ue3o/qKM0tVBkjHy3eLMNFSH/F+nJS39u9fCWAoDg=",
         "path": "/secrets/service-passwords",
         "type": "path"
       },
@@ -3474,8 +3474,8 @@
     "service-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684285,
-        "narHash": "sha256-9k6Zfzagx5E7NqpoNX8F2EUv7p0jOYFdv3urzGfhOd0=",
+        "lastModified": 1705264542,
+        "narHash": "sha256-7CBc+x58VD5a+7b7LUm0AslGRDuKcYlvScZrDYIC6/s=",
         "path": "/secrets/service-secrets",
         "type": "path"
       },
@@ -3500,8 +3500,8 @@
     "ssh-keypairs": {
       "flake": false,
       "locked": {
-        "lastModified": 1786684301,
-        "narHash": "sha256-uF/a47zMfQOn0rdpV5pAPK+XxNDoBcO5df+YCXhLL/g=",
+        "lastModified": 1786339856,
+        "narHash": "sha256-m3Zm0tyTINR6AEB77rWkGnMQMj6Vb2GgNB5zUtI+ruw=",
         "path": "/secrets/ssh-keypairs",
         "type": "path"
       },
