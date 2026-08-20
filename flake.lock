@@ -813,11 +813,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787218027,
-        "narHash": "sha256-VU0Bhl+n7gwJEHqv04Os5gaZkVqq2t2SXaG90E+VXtQ=",
+        "lastModified": 1787245972,
+        "narHash": "sha256-orLn23DZS7QzynpYAS+lLfZTCQg9w8MQud+BcXqAgCQ=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "2d882b3cd3c18674cf3f8670c7553b05c1d6e0dc",
+        "rev": "f6a1187e02ce51cf4303f348aa35398f57e39fa7",
         "type": "github"
       },
       "original": {
@@ -1520,11 +1520,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1787238011,
-        "narHash": "sha256-jbMaBFr22H9oAp41rpBcDszri4w90Js59JAP0VaOQ6w=",
+        "lastModified": 1787265395,
+        "narHash": "sha256-3VoU1imc0BhnMra37aiNbfWTJwmqsxEYGnMKtgG1beg=",
         "ref": "26.05-aegis",
-        "rev": "9ef356a8f54213794c31b54ce7e0b6499aa4c317",
-        "revCount": 1590,
+        "rev": "80bf2d6aa7296a4417381ee8ff183c4fbf21fff0",
+        "revCount": 1592,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -1544,11 +1544,11 @@
         "utils": "utils_6"
       },
       "locked": {
-        "lastModified": 1787157340,
+        "lastModified": 1787241882,
         "narHash": "sha256-FAzRfaNPCS3hfDrVdsfu9oHl1PW3e6Jyc/Wrbc8wuB8=",
         "owner": "fudoniten",
         "repo": "fudo-nix-pkgs",
-        "rev": "2d9ade3bc1e83554364f94f1dde1cfca6cf379e8",
+        "rev": "d6bbc880fe84c90d98a4a4bfb0443eeaeba4f709",
         "type": "github"
       },
       "original": {
@@ -1572,11 +1572,11 @@
         "utils": "utils_16"
       },
       "locked": {
-        "lastModified": 1787157340,
+        "lastModified": 1787241882,
         "narHash": "sha256-FAzRfaNPCS3hfDrVdsfu9oHl1PW3e6Jyc/Wrbc8wuB8=",
         "owner": "fudoniten",
         "repo": "fudo-nix-pkgs",
-        "rev": "2d9ade3bc1e83554364f94f1dde1cfca6cf379e8",
+        "rev": "d6bbc880fe84c90d98a4a4bfb0443eeaeba4f709",
         "type": "github"
       },
       "original": {
@@ -2170,11 +2170,11 @@
         "zen-browser": "zen-browser"
       },
       "locked": {
-        "lastModified": 1787237974,
-        "narHash": "sha256-yoACd2/XqCTcs9CJWEDgksZHapCGWLJZQYmyxZH2jDI=",
+        "lastModified": 1787257862,
+        "narHash": "sha256-FEdfZemb17Dul/VmKLr19RyKS8m0U9EcuYD8cRVlzI0=",
         "owner": "fudoniten",
         "repo": "fudo-nix-home",
-        "rev": "833a5e455a5550aee2914cb5eba30bc164dfd686",
+        "rev": "0350eb8d4baeaed68238359c179121e0edfe1e4f",
         "type": "github"
       },
       "original": {
