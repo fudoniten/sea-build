@@ -1520,11 +1520,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1787234878,
-        "narHash": "sha256-DuzS5Zgdqs0Vos6Si7OYOVvD6rpFXUTX9GSWLx7upEA=",
+        "lastModified": 1787237298,
+        "narHash": "sha256-Cm8eQ+PYtztiom4cWlZtFrKuqN2r5gnxVEPH06CE1s4=",
         "ref": "26.05-aegis",
-        "rev": "f357cc17e2868d78e977a5e17fb3df11b951d825",
-        "revCount": 1588,
+        "rev": "ae57b411e1dfb107096040e669729dad800e7cb0",
+        "revCount": 1589,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -2170,17 +2170,40 @@
         "zen-browser": "zen-browser"
       },
       "locked": {
-        "lastModified": 1787234782,
-        "narHash": "sha256-5Wao/js16cRwXxO68B1iNKJZdmmLVSHpUzt+Pyf4970=",
+        "lastModified": 1787237240,
+        "narHash": "sha256-N7lZLYb1G3j8ZGNll576XuxmIjr4QKbv9q69BWvfNtI=",
         "owner": "fudoniten",
         "repo": "fudo-nix-home",
-        "rev": "8a5a2ea177871c7ddff97c1f3c396c02c117b552",
+        "rev": "b641e62f6806cd45d04f5ae108b85135b615b9ef",
         "type": "github"
       },
       "original": {
         "owner": "fudoniten",
         "ref": "26.05",
         "repo": "fudo-nix-home",
+        "type": "github"
+      }
+    },
+    "home-manager_2": {
+      "inputs": {
+        "nixpkgs": [
+          "fudo-nixos",
+          "home-manager-config",
+          "zen-browser",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786719456,
+        "narHash": "sha256-B74DLQs/VjlqyhnnX3tguWwghqJHWSJX30TKZuAljIg=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "83b7606dcf44abe3a94b86e8bb2b3355d22e8797",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
         "type": "github"
       }
     },
@@ -4791,6 +4814,7 @@
     },
     "zen-browser": {
       "inputs": {
+        "home-manager": "home-manager_2",
         "nixpkgs": [
           "fudo-nixos",
           "home-manager-config",
@@ -4798,15 +4822,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1787200418,
-        "narHash": "sha256-4d24Wa/CO8WsSEjKwzFwJXn+oxbI4Bm8xuMR77xJgYI=",
-        "owner": "youwen5",
+        "lastModified": 1787197732,
+        "narHash": "sha256-rxqzRhFq8Gpem967K+jGkw4kfm1ZN9bsNzaujG4Z6wc=",
+        "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "20195bc99e82b02abe82bb81ac366ae81c67dc5a",
+        "rev": "dc0baff0a6041483be3816cf2e12ae053b5e458a",
         "type": "github"
       },
       "original": {
-        "owner": "youwen5",
+        "owner": "0xc000022070",
         "repo": "zen-browser-flake",
         "type": "github"
       }
