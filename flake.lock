@@ -24,11 +24,11 @@
     "aegis-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1787280772,
-        "narHash": "sha256-AhigaUPIuy6nGcxX2zBOKXVNJkX2v9hcv40OJRgsVdY=",
+        "lastModified": 1787291345,
+        "narHash": "sha256-AamY8lba2tYmmY2FYJ+mb7W6IzzBKqYFivfflgr48Ng=",
         "owner": "fudoniten",
         "repo": "aegis-secrets",
-        "rev": "b433bb220664f8bd2f109f4f143b666608a90d8e",
+        "rev": "3260e051f357cca97adc42ea6df50bf450114e16",
         "type": "github"
       },
       "original": {
@@ -1398,11 +1398,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787280549,
-        "narHash": "sha256-8Atl9E7pylTqRVujuForTJlVZhPyBGiKMaDUuOuV5Mc=",
+        "lastModified": 1787290831,
+        "narHash": "sha256-Wf6XeaDg5U7ySuyS80H09P5x9rKSDs3O4tE29eMMgIQ=",
         "ref": "refs/heads/master",
-        "rev": "cf0b399ceb1bc555caed7f6b1aacfa836a53850e",
-        "revCount": 438,
+        "rev": "46f8f6df076f67372b28c60da3e7c63e359c9b65",
+        "revCount": 440,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-entities"
       },
@@ -1520,11 +1520,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1787287541,
-        "narHash": "sha256-JftHULZ9RpneRB8kBaj/JaoWlAiO0/n+8f/0ECitppk=",
+        "lastModified": 1787291521,
+        "narHash": "sha256-YQrT9/RCKg206EOVLA66/HkgUm3XW04ZxCs+Npv7ILA=",
         "ref": "26.05-aegis",
-        "rev": "f78d98123e3889d2a6a20313420a65e898bb9ab3",
-        "revCount": 1595,
+        "rev": "de63aab4cfbaddc0ade6903291ca01ceae308bfd",
+        "revCount": 1598,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
