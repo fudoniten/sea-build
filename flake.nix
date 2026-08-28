@@ -51,6 +51,27 @@
 
         inherit (hostOpts) site domain;
 
+        # Batch targets. deploy-rs merges `groups` from deploy -> node ->
+        # profile and filters on `--groups`, so tagging the node here is all
+        # that `deploy .# --groups kerberos` needs.
+        #
+        # Membership is derived, not listed: fudo-nixos reads each host's
+        # Aegis roles (accurate because that host's secrets depend on them
+        # being accurate) and its profile (which is what says "desktop" --
+        # Aegis has no opinion, since a desktop needs no special secrets).
+        # A host that gains a role gains the group, with nothing to update
+        # here.
+        #
+        # `site-*` and `domain-*` are deliberately absent: the deploy outputs
+        # below already cover those, and a group of the same name would just
+        # be a second spelling of `.#site-burg`.
+        groups = fudo-nixos.lib.deployGroups.forHost {
+          # Policy rather than a property of the host, so it cannot be
+          # derived from anything: the canary is whichever host you would
+          # rather find out about a bad release on first.
+          extra = { };
+        } hostname hostOpts;
+
         # Deploy the system profile first so nginx exists before the
         # game-site profile reloads it (attr order alone would run the
         # alphabetically-earlier "game-site" first).
