@@ -829,11 +829,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787650344,
-        "narHash": "sha256-32la5GMQSrtTmynUaP8n7vLeogQ61PmQzQCy3QEZkaQ=",
+        "lastModified": 1787913037,
+        "narHash": "sha256-y9Ff62SXccO34iqDcy1+Fj0UvkIq7H8o4zbeQo/hXPE=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "310a9af807997c395d816ae827f7d91692eeb4f2",
+        "rev": "5b8f060a63e9edc248eee5a258f5abcd2f128caa",
         "type": "github"
       },
       "original": {
@@ -1537,11 +1537,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1787942273,
-        "narHash": "sha256-sYEtJuXCo/bdxK1Euz7mHO94rqtHzU3R5ZothXrriOI=",
+        "lastModified": 1787947350,
+        "narHash": "sha256-4LR/F5UX6WkL+EJCMcqTRRztEyUDCJjCubDoVDel/mQ=",
         "ref": "26.05-aegis",
-        "rev": "8d7c514027591015824386f38f8355ca88fe37e1",
-        "revCount": 1628,
+        "rev": "7ea28d83d388ecbecf476bf7ae981af3471e040c",
+        "revCount": 1637,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -2998,11 +2998,11 @@
     },
     "nixpkgsUnstable_2": {
       "locked": {
-        "lastModified": 1787498568,
-        "narHash": "sha256-FoOSoBG7tEvOlGRTpWnVdY506Ner4y7r7UYO3OGgmE8=",
-        "rev": "56c02bc00adcf003215cc4bd996d6efaf4cff188",
+        "lastModified": 1787736819,
+        "narHash": "sha256-IkjmqLoWzeqBAi1VIkdhDLMGjQDJ4suEDp59Zwxpswg=",
+        "rev": "9fbb54b33e91ee4ca368e35a78e0613c720600b3",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1060451.56c02bc00adc/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1062397.9fbb54b33e91/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
