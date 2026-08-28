@@ -1537,11 +1537,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1787675613,
-        "narHash": "sha256-Rg/JLGoBjDj0zILl4hcYlQtLhTGM/RTd6nEZCpcPdYg=",
+        "lastModified": 1787942273,
+        "narHash": "sha256-sYEtJuXCo/bdxK1Euz7mHO94rqtHzU3R5ZothXrriOI=",
         "ref": "26.05-aegis",
-        "rev": "4913f418064bdb86e9055c244754d37cedf3523b",
-        "revCount": 1626,
+        "rev": "8d7c514027591015824386f38f8355ca88fe37e1",
+        "revCount": 1628,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -3237,11 +3237,11 @@
     },
     "nixpkgs_24": {
       "locked": {
-        "lastModified": 1787640266,
-        "narHash": "sha256-tbu/95O8ZRmCj0kfSiDvz3YT7GSnD0fO6cxLRVYtXnU=",
-        "rev": "f4f698677b11021a8f84f452e23ae9ef2427bec3",
+        "lastModified": 1787848966,
+        "narHash": "sha256-pbm8BrmtI4lOXt2syJ3FP12LjybYuiTdUO0GQrbQMk0=",
+        "rev": "d57af924f160a5084293c71c2043f058bd1cdb60",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.8409.f4f698677b11/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.8538.d57af924f160/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
