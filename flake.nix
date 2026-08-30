@@ -9,7 +9,7 @@
     utils.url = "github:numtide/flake-utils";
 
     fudo-nixos = {
-      url = "github:fudoniten/nixos-config/26.05";
+      url = "github:fudoniten/nixos-config/26.05-aegis";
       inputs = {
         fudo-entities.follows = "fudo-entities";
         nixpkgs.follows = "nixpkgs";
