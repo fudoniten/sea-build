@@ -32,7 +32,7 @@
     # Used to override the `nixos-config` secrets, since `sea.fudo.org` and
     # `burg.fudo.org` use different secrets repos
     fudo-secrets = {
-      url = "path:/state/secrets";
+      url = "path:/secrets";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         fudo-entities.follows = "fudo-entities";
