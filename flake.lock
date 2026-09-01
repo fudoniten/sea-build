@@ -24,11 +24,11 @@
     "aegis-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1788116205,
-        "narHash": "sha256-AzoJ2KFj1Xu3LV2LLMBgTy3JCdbz16OnnH+C8kzzc4k=",
+        "lastModified": 1788242217,
+        "narHash": "sha256-LJfOPw4LOb1R5JcmGayavN1rGPtTZrnbShAo9h8gWBg=",
         "owner": "fudoniten",
         "repo": "aegis-secrets",
-        "rev": "4a2b8e45fd11aea319fa7a6425866753840e996c",
+        "rev": "d966e4acac1c2690fef2d3a8698ab71415f22914",
         "type": "github"
       },
       "original": {
@@ -1745,11 +1745,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788196547,
-        "narHash": "sha256-g2tCZBp09ZRM++D3b4ikuG+25X5Bl8lCk/Dm6pa0uwg=",
+        "lastModified": 1788241790,
+        "narHash": "sha256-5SYIUb74qJTa1bjTJkeKdRkszHf/D5GuwAm9csgDxLA=",
         "ref": "refs/heads/master",
-        "rev": "836b64d10dd73193f6442ba86d4f45a637a4d102",
-        "revCount": 446,
+        "rev": "cf10b42e4451fc28fa6917c8e7c396e99f3aab79",
+        "revCount": 452,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-entities"
       },
@@ -1884,11 +1884,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1788238853,
-        "narHash": "sha256-NmYc+j8oOVkIlFguZunnaak2s/3bAX1cphqH3UTjAwU=",
+        "lastModified": 1788242689,
+        "narHash": "sha256-lUNklQGJdVMyCEBIvidGh4nlWE9HUEtJhuGjlUad1RE=",
         "ref": "26.05-aegis",
-        "rev": "eb6dd99c49525fb9956bc717051b33f7ea8ad184",
-        "revCount": 1658,
+        "rev": "ec9963632c4e7eae50b72efd1e3beee96198435a",
+        "revCount": 1664,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -2006,8 +2006,8 @@
         "utils": "utils_11"
       },
       "locked": {
-        "lastModified": 1786895689,
-        "narHash": "sha256-7uJcWCzbjg0+gaLdan0zoay+WoRusSYi3iNYJc8jKOY=",
+        "lastModified": 1788242656,
+        "narHash": "sha256-nKT7WnA+7XI4zc0HtF3EQKmKSnjnKTlkn5W2TLlc/c0=",
         "path": "/secrets",
         "type": "path"
       },
@@ -3032,8 +3032,8 @@
     "nexus-keys": {
       "flake": false,
       "locked": {
-        "lastModified": 1786339861,
-        "narHash": "sha256-Tbnp4iRvOO7NPkBeQ7WH3rmzAgU7EeMdzG5hIRYfpm0=",
+        "lastModified": 1786894936,
+        "narHash": "sha256-wNDGJtZtlugFln97CEcPBa5sj2X+tliihIPRSpncPhM=",
         "path": "/secrets/nexus-keys",
         "type": "path"
       },
@@ -4427,8 +4427,8 @@
     "ssh-keypairs": {
       "flake": false,
       "locked": {
-        "lastModified": 1786339856,
-        "narHash": "sha256-m3Zm0tyTINR6AEB77rWkGnMQMj6Vb2GgNB5zUtI+ruw=",
+        "lastModified": 1786894928,
+        "narHash": "sha256-v1b1JErlMuKeH5cY8KGvomkTW1dlnR76qe1kENaTCi8=",
         "path": "/secrets/ssh-keypairs",
         "type": "path"
       },
