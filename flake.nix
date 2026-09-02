@@ -35,7 +35,7 @@
       url = "path:/secrets";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        fudo-entities.follows = "fudo-entities";
+        entities.follows = "fudo-entities";
       };
     };
   };
