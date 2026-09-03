@@ -24,11 +24,11 @@
     "aegis-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1788307664,
-        "narHash": "sha256-83jT1TbUl1CN39i4jDdRhLqNkHcA7uotJJatVgpxw1E=",
+        "lastModified": 1788454518,
+        "narHash": "sha256-pAu4reLIUdcLtDOmE4oskLAOFeSkv1GTB78qu9kuAhQ=",
         "owner": "fudoniten",
         "repo": "aegis-secrets",
-        "rev": "55c00f7554dab92013e0ce0683801cc393ad080d",
+        "rev": "a771875f557498a7c286fe34062f9faf99dc2c75",
         "type": "github"
       },
       "original": {
@@ -1017,11 +1017,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788406812,
-        "narHash": "sha256-8OUmfoORP05ZUdt2mgfCCUSrkHhr0jpdPRFLXLIn9tM=",
+        "lastModified": 1788442118,
+        "narHash": "sha256-vme/YwTd2Xs6x7pApyOTCywhkY1OjZzDbAhratn4ClA=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "fc200415b56c7194901bc5485d04d3284c05ce24",
+        "rev": "0fa9f4605a6e7f95693fadb820d13ae7e804c2f8",
         "type": "github"
       },
       "original": {
@@ -1851,11 +1851,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1788410250,
-        "narHash": "sha256-UkZueK/qyL6CIsUpLjCrMkiaHQthND3TOX+HnKra2co=",
+        "lastModified": 1788454704,
+        "narHash": "sha256-taMnTto50EdKP9PBNT6SCr4SjX16OsQXQlrI0Kfz6Mo=",
         "ref": "26.05-aegis",
-        "rev": "ea61b1e9a1551224e6246de8ea9997b4412bcc78",
-        "revCount": 1672,
+        "rev": "a5591df2e6f1fd754706a64968226387ce3132de",
+        "revCount": 1673,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -3664,11 +3664,11 @@
     },
     "nixpkgsUnstable_2": {
       "locked": {
-        "lastModified": 1788179007,
-        "narHash": "sha256-maQBa7XmWJ+a6te4QwF++R1FIXUrjvki0AtGOOhyZn0=",
-        "rev": "34ab99075ac4f7e40cf037eef32cb1c360bb85e9",
+        "lastModified": 1788316716,
+        "narHash": "sha256-7VBL4mi5M72FJtZOQt7SbCGWpGbsuH1ga6Zeu8bjtWk=",
+        "rev": "3ed67ec0a4d3c7ab4ae1f04f8ee8df07bfa506a2",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1064949.34ab99075ac4/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1066106.3ed67ec0a4d3/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
