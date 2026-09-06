@@ -37,14 +37,39 @@
     let
       defaultSshOpts = [ "-oControlMaster=no" "-oControlPath=none" ];
 
+      # Every node is x86_64-linux (see deploy-rs.lib.x86_64-linux below), and
+      # the node set is built outside eachDefaultSystem, so the Aegis
+      # ciphertext derivations need a pkgs of their own here.
+      hostPkgs = import nixpkgs { system = "x86_64-linux"; };
+
       # Hosts that serve the game-site static bundle via its own profile.
       gameSiteHosts = [ "arx" ];
       gameSitePackage = game-site.packages.x86_64-linux.default;
 
+      # Hosts that take their secrets from their own profile rather than from
+      # the system closure.
+      #
+      # Read off the host's own configuration rather than listed here: the
+      # decrypt units read `aegis.secrets.runtimePath`, so taking the same
+      # value as this profile's `profilePath` is what makes the units and the
+      # profile point at the same directory by construction. A list here could
+      # disagree with the host, and the failure would be secrets that decrypt
+      # into a path nothing reads.
+      aegisRuntimePath = hostname:
+        let cfg = fudo-nixos.nixosConfigurations.${hostname}.config.aegis.secrets;
+        in if cfg.enable then cfg.runtimePath else null;
+
       allNodes = let
         nodeEntities = filterAttrs (_: hostOpts: hostOpts.deploy.enable)
           fudo-entities.entities.hosts;
-      in mapAttrs (hostname: hostOpts: {
+      in mapAttrs (hostname: hostOpts:
+      let
+        aegisPath = aegisRuntimePath hostname;
+        aegisCiphertext = if aegisPath == null then
+          null
+        else
+          fudo-nixos.lib.aegisProfile.forHost hostPkgs hostname;
+      in {
         hostname = fudo-entities.lib.getHostIpv4 hostname;
         sshOpts = defaultSshOpts ++ hostOpts.deploy.ssh-options;
         sshUser = "root";
@@ -75,7 +100,14 @@
         # Deploy the system profile first so nginx exists before the
         # game-site profile reloads it (attr order alone would run the
         # alphabetically-earlier "game-site" first).
-        profilesOrder = [ "system" ]
+        #
+        # "aegis" is system-first for a different reason. Its activation
+        # refuses ciphertext whose manifest does not match the one the running
+        # generation was built against, and that fingerprint arrives with the
+        # system profile -- so on a manifest change, aegis-first would be
+        # rejected by design. Rotations, where the manifest is untouched, are
+        # the case that skips the system profile entirely.
+        profilesOrder = [ "system" ] ++ (optional (aegisPath != null) "aegis")
           ++ (optional (elem hostname gameSiteHosts) "game-site");
 
         profiles = {
@@ -84,7 +116,85 @@
             path = deploy-rs.lib.x86_64-linux.activate.nixos
               fudo-nixos.nixosConfigurations."${hostname}";
           };
-        } // (optionalAttrs (elem hostname gameSiteHosts) {
+        } // (optionalAttrs (aegisPath != null) {
+          # The host's .age files and manifest, and nothing else -- about 29 KB
+          # against the 13 MB of aegis-secrets that otherwise rides in every
+          # system closure.
+          #
+          # The point is not the size. It is that the ciphertext's store path
+          # is baked into every decrypt script, so rotating one secret changes
+          # the closure of every host that shares the repo, and a rotation --
+          # the cheapest thing Aegis does -- costs a full system deploy of the
+          # fleet. Split out, `aegis reencrypt` is followed by a deploy of this
+          # profile alone. The system generation only has to move when the
+          # manifest does, which is when a secret is added, moved or re-owned,
+          # and that almost always arrives with the service that consumes it.
+          #
+          # Target it alone with `.#deploy.<host>.aegis`.
+          aegis = {
+            user = "root";
+
+            # Profile-level groups are merged with the node's and filtered
+            # per (node, profile) pair, so this makes
+            #   deploy .# --groups aegis
+            # a fleet-wide secrets deploy that touches no system profile.
+            # With `--groups kerberos` it intersects the node's groups the
+            # usual way, so `--groups aegis --groups kerberos` is "the KDCs'
+            # secrets" -- which is the shape a role-secret rotation wants.
+            groups = [ "aegis" ];
+
+            # The same path the decrypt units read from: both sides take it
+            # from the host's `aegis.secrets.runtimePath`, so they cannot be
+            # pointed at different directories.
+            profilePath = aegisPath;
+
+            # The store path is interpolated rather than reached through
+            # $PROFILE, as game-site does above: it keeps the ciphertext in
+            # the profile's closure (so it is copied to the host and pinned as
+            # a GC root) and it lets the verifier run against exactly the
+            # content that is about to be linked.
+            #
+            # The units read through the profile link, not this path. That is
+            # the whole point -- the link is what stays constant across
+            # rotations, so the system generation does not have to move.
+            # `hosts/<h>/../../roles/<r>` resolves correctly either way: the
+            # profile's hosts/ and roles/ both come from this one derivation.
+            path = deploy-rs.lib.x86_64-linux.activate.custom aegisCiphertext ''
+              set -euo pipefail
+
+              # Verify before restarting anything. A decrypt unit that is
+              # restarted and then fails is not recoverable here: sshd
+              # `Requires=` its host-key units, so systemd propagates the
+              # failure and stops sshd, magic-rollback cannot reconnect, and
+              # rolling this profile back does not bring sshd up again.
+              #
+              # aegis-verify-profile decrypts every secret to /dev/null with
+              # the identity its unit would use and checks the manifest
+              # fingerprint against the one this system generation was built
+              # with. It writes nothing and touches no unit, so a profile that
+              # cannot be decrypted -- or that belongs to a different manifest
+              # -- is refused while the host still runs the old one.
+              #
+              # deploy-rs has already pointed the profile link at this closure
+              # by the time we run (nix-env --set precedes activation), so a
+              # failure here leaves the link ahead of the units until rollback.
+              # autoRollback restores the previous generation *and* re-runs its
+              # activation script, which relinks the old ciphertext and
+              # restarts the units against it -- so the recovery is complete
+              # rather than merely reverting the symlink.
+              /run/current-system/sw/bin/aegis-verify-profile ${aegisCiphertext}
+
+              # Restart in the order Aegis generated: by phase, and SSH host
+              # keys last within each phase, so anything else that is going to
+              # fail does so while sshd is still up to carry the rollback.
+              while read -r unit; do
+                [ -n "$unit" ] || continue
+                echo "aegis: restarting $unit"
+                systemctl restart "$unit"
+              done < /etc/aegis/profile-units
+            '';
+          };
+        }) // (optionalAttrs (elem hostname gameSiteHosts) {
           # Standalone static-site profile. Activation links the current
           # bundle into the path nginx serves (/srv/www/games) and reloads
           # nginx -- it never restarts sshd, so magic-rollback health checks
