@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788486790,
-        "narHash": "sha256-zsU3Y0UJQbXFkKjqcHWOWi8fgB1VpqX3gTPRFWmlH0s=",
+        "lastModified": 1788716796,
+        "narHash": "sha256-mmrujU44mS77h12gZmE0KhSLlp7FwDXw9WYGV15JYxE=",
         "owner": "fudoniten",
         "repo": "aegis",
-        "rev": "c2a3d3e6d790449257d51a2a9579b7b953de0352",
+        "rev": "903686f7010cd186f29744af7fdc8fcfa7785c30",
         "type": "github"
       },
       "original": {
@@ -24,11 +24,11 @@
     "aegis-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1788672604,
-        "narHash": "sha256-Psk0LkGIg6ha5/jFWyMTaFCdARLoNLrDV7eKDg7oolQ=",
+        "lastModified": 1788674395,
+        "narHash": "sha256-5weo+xvSSXD+Jf9prixR1+VVbS8sZ+XuiAn4zxUzMsI=",
         "owner": "fudoniten",
         "repo": "aegis-secrets",
-        "rev": "153f02c20127d75a1d176298599d0dd6fa33b418",
+        "rev": "b881db6affdff3714f37800cd4ab7f65f3e2620e",
         "type": "github"
       },
       "original": {
@@ -800,11 +800,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788666871,
-        "narHash": "sha256-uKzj7V+NVJ5eIkpbgtLDX4B+WaQgTnXQRWemAw2AYX4=",
+        "lastModified": 1788705880,
+        "narHash": "sha256-07aHnOVYDHBFqDmntUI0tIzPfIEGYrVtId2+7AIj8Jk=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "526ed4cde185a2dd5d135e6dc4112c43a510606f",
+        "rev": "a1debe512f791fb9215790bfb66116e69298799a",
         "type": "github"
       },
       "original": {
@@ -1506,11 +1506,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1788675845,
-        "narHash": "sha256-rg6Pazq4487W54quzPQvsmNNS7GnoeDbIkU8+CWYdLQ=",
+        "lastModified": 1788717827,
+        "narHash": "sha256-GXTV4XQinLtRZnMdfGhyNN6RXLgOnFUj4JIXgij27tk=",
         "ref": "26.05-aegis",
-        "rev": "b0f27ddf2d12c91da40b560a1ab05cd6163dc4a3",
-        "revCount": 1705,
+        "rev": "465074d9d1050616d2d63178498d74bb9f27f758",
+        "revCount": 1706,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
