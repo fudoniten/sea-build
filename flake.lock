@@ -1506,11 +1506,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1788747624,
-        "narHash": "sha256-0rIP9cn+Jf+7K8nP6YTqdnMDDkLUTlDFr6Gat6YnXV0=",
+        "lastModified": 1788749286,
+        "narHash": "sha256-dR+DnsnMXOi84Lvt3jhrLjfewvJOU/+m8BfPj/0VVj0=",
         "ref": "26.05-aegis",
-        "rev": "ab7e626b7ef686fec6b6d410b121d5e015b35fc8",
-        "revCount": 1714,
+        "rev": "5f46c7f020b9d8017f24fa43332c1cb7221b6839",
+        "revCount": 1715,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -2365,11 +2365,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788747545,
-        "narHash": "sha256-HIuvrsSVnkXJ2qzmg3AiMhXFtEKO10L4prqySpWIvXs=",
+        "lastModified": 1788749226,
+        "narHash": "sha256-F73lTx59GJRB0bN7qxOo1owkVmDjYqDV+q/rPk5Mi6k=",
         "owner": "fudoniten",
         "repo": "nix-mail-server",
-        "rev": "0a2e5ea447ddba8b7fcca7da33feed135c8538b5",
+        "rev": "c4d0db8fa12e17cc585ebcb857fa7d0627ef59a9",
         "type": "github"
       },
       "original": {
