@@ -82,6 +82,10 @@
           null
         else
           fudo-nixos.lib.aegisProfile.forHost hostPkgs hostname;
+        # From the incoming generation, deliberately -- see the activation
+        # script below.
+        aegisVerifier =
+          fudo-nixos.nixosConfigurations.${hostname}.config.aegis.secrets.verifyProfilePackage;
       in {
         hostname = fudo-entities.lib.getHostIpv4 hostname;
         sshOpts = defaultSshOpts ++ hostOpts.deploy.ssh-options;
@@ -114,13 +118,21 @@
         # game-site profile reloads it (attr order alone would run the
         # alphabetically-earlier "game-site" first).
         #
-        # "aegis" is system-first for a different reason. Its activation
-        # refuses ciphertext whose manifest does not match the one the running
-        # generation was built against, and that fingerprint arrives with the
-        # system profile -- so on a manifest change, aegis-first would be
-        # rejected by design. Rotations, where the manifest is untouched, are
-        # the case that skips the system profile entirely.
-        profilesOrder = [ "system" ] ++ (optional (aegisPath != null) "aegis")
+        # "aegis" goes *before* "system", and that ordering is load-bearing.
+        #
+        # The decrypt units name their sources under runtimePath, so enabling
+        # it -- or moving any secret -- changes them, and
+        # switch-to-configuration restarts them. If the ciphertext is not
+        # linked yet they fail, and sshd `Requires=` its host-key units, so
+        # the deploy takes sshd down with it. Deploying the ciphertext first
+        # makes that interleaving impossible rather than merely detectable:
+        # the .age files are always at least as new as the units reading them.
+        #
+        # (This was system-first, on the theory that the manifest fingerprint
+        # had to land before the ciphertext could be checked against it. That
+        # got it backwards -- the check now travels with the verifier instead
+        # of being read off the running machine.)
+        profilesOrder = (optional (aegisPath != null) "aegis") ++ [ "system" ]
           ++ (optional (elem hostname gameSiteHosts) "game-site");
 
         profiles = {
@@ -143,7 +155,8 @@
           # manifest does, which is when a secret is added, moved or re-owned,
           # and that almost always arrives with the service that consumes it.
           #
-          # Target it alone with `.#deploy.<host>.aegis`.
+          # Target it alone with `.#deploy.<host>.aegis`, which is what a
+          # rotation is.
           aegis = {
             user = "root";
 
@@ -175,36 +188,48 @@
             path = deploy-rs.lib.x86_64-linux.activate.custom aegisCiphertext ''
               set -euo pipefail
 
-              # Verify before restarting anything. A decrypt unit that is
-              # restarted and then fails is not recoverable here: sshd
-              # `Requires=` its host-key units, so systemd propagates the
-              # failure and stops sshd, magic-rollback cannot reconnect, and
-              # rolling this profile back does not bring sshd up again.
+              # The verifier from the generation we are about to install, not
+              # the one already running. Deploying ciphertext first means the
+              # running generation is a step behind by design: its verifier
+              # knows the outgoing set of secrets and the outgoing manifest,
+              # and would reject a correct deploy. This one was built from the
+              # same evaluation as the ciphertext it is checking.
               #
-              # aegis-verify-profile decrypts every secret to /dev/null with
-              # the identity its unit would use and checks the manifest
-              # fingerprint against the one this system generation was built
-              # with. It writes nothing and touches no unit, so a profile that
-              # cannot be decrypted -- or that belongs to a different manifest
-              # -- is refused while the host still runs the old one.
-              #
-              # deploy-rs has already pointed the profile link at this closure
-              # by the time we run (nix-env --set precedes activation), so a
-              # failure here leaves the link ahead of the units until rollback.
-              # autoRollback restores the previous generation *and* re-runs its
-              # activation script, which relinks the old ciphertext and
-              # restarts the units against it -- so the recovery is complete
-              # rather than merely reverting the symlink.
-              /run/current-system/sw/bin/aegis-verify-profile ${aegisCiphertext}
+              # It decrypts every secret to /dev/null with the identity its
+              # unit would use, writing nothing and touching no unit, so a
+              # profile that cannot be decrypted is refused while the host is
+              # still running entirely on the old one.
+              ${aegisVerifier}/bin/aegis-verify-profile ${aegisCiphertext}
 
-              # Restart in the order Aegis generated: by phase, and SSH host
-              # keys last within each phase, so anything else that is going to
-              # fail does so while sshd is still up to carry the rollback.
-              while read -r unit; do
-                [ -n "$unit" ] || continue
-                echo "aegis: restarting $unit"
-                systemctl restart "$unit"
-              done < /etc/aegis/profile-units
+              # Whether to restart anything depends on what else is being
+              # deployed, and the manifest fingerprint is how to tell.
+              #
+              # Equal: the running system already agrees with this manifest,
+              # so its units are the right ones and this is a rotation --
+              # restart them and the new plaintext lands.
+              #
+              # Different: the units are changing, and the system profile
+              # activating right after us will install and start the new ones
+              # against ciphertext that is, by this ordering, already in
+              # place. Restarting the outgoing units here would at best be
+              # redundant and at worst fail on a secret this manifest no
+              # longer carries.
+              incoming=$(${hostPkgs.coreutils}/bin/sha256sum \
+                ${aegisCiphertext}/hosts/${hostname}/secrets.toml \
+                | ${hostPkgs.coreutils}/bin/cut -d' ' -f1)
+
+              if [ -r /etc/aegis/manifest.sha256 ] \
+                 && [ -r /etc/aegis/profile-units ] \
+                 && [ "$(${hostPkgs.coreutils}/bin/cat /etc/aegis/manifest.sha256)" = "$incoming" ]; then
+                while read -r unit; do
+                  [ -n "$unit" ] || continue
+                  echo "aegis: restarting $unit"
+                  /run/current-system/sw/bin/systemctl restart "$unit"
+                done < /etc/aegis/profile-units
+              else
+                echo "aegis: manifest differs from the running system;" \
+                     "leaving unit restarts to the system profile"
+              fi
             '';
           };
         }) // (optionalAttrs (elem hostname gameSiteHosts) {
