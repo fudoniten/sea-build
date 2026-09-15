@@ -74,6 +74,29 @@
           cfg = fudo-nixos.nixosConfigurations.${hostname}.config.aegis.secrets;
         in if cfg.enable then cfg.runtimePath else null;
 
+      # Hosts whose zonefiles ship as their own profile rather than inside the
+      # system closure, and what to send them.
+      #
+      # Read off the host's own configuration for the same reason
+      # aegisRuntimePath is: nsd installs from whatever
+      # `services.fudo-nsd.zonefilesPath` says, so taking this profile's path
+      # from the same option is what makes the two agree by construction. A
+      # list here could disagree with the host, and the failure would be zones
+      # deployed to a directory nothing reads -- silently stale DNS, which is
+      # the hardest kind to notice.
+      #
+      # The package comes from the host too. Unlike the Aegis ciphertext there
+      # is nothing to assemble: the zonefiles are generated from the same
+      # evaluation as the nsd.conf that names them, so the module just exposes
+      # the derivation it already built.
+      dnsZones = hostname:
+        let cfg = fudo-nixos.nixosConfigurations.${hostname}.config.services.fudo-nsd;
+        in if cfg.enable && cfg.zonefilesPath != null then {
+          path = cfg.zonefilesPath;
+          package = cfg.zonefilesPackage;
+        } else
+          null;
+
       allNodes = let
         nodeEntities = filterAttrs (_: hostOpts: hostOpts.deploy.enable)
           fudo-entities.entities.hosts;
@@ -88,6 +111,7 @@
           # script below.
           aegisVerifier =
             fudo-nixos.nixosConfigurations.${hostname}.config.aegis.secrets.verifyProfilePackage;
+          zones = dnsZones hostname;
         in {
           hostname = fudo-entities.lib.getHostIpv4 hostname;
           sshOpts = defaultSshOpts ++ hostOpts.deploy.ssh-options;
@@ -134,7 +158,15 @@
           # had to land before the ciphertext could be checked against it. That
           # got it backwards -- the check now travels with the verifier instead
           # of being read off the running machine.)
-          profilesOrder = (optional (aegisPath != null) "aegis") ++ [ "system" ]
+          # "dns-zones" goes before "system" for the same reason "aegis" does,
+          # though less sharply: the module overlays the profile onto the copy
+          # still in the system closure, so neither order can leave nsd unable
+          # to start. What the order buys is one fewer reload and no window of
+          # stale records -- system-first would restart nsd against the
+          # previous profile, serve the old records until this one landed, and
+          # then reload again.
+          profilesOrder = (optional (aegisPath != null) "aegis")
+            ++ (optional (zones != null) "dns-zones") ++ [ "system" ]
             ++ (optional (elem hostname gameSiteHosts) "game-site");
 
           profiles = {
@@ -234,6 +266,67 @@
                          "leaving unit restarts to the system profile"
                   fi
                 '';
+            };
+          }) // (optionalAttrs (zones != null) {
+            # This host's zonefiles, and nothing else -- a few hundred
+            # kilobytes of text against the whole nameserver's system closure.
+            #
+            # The point, as with aegis above, is not the size. Zone content is
+            # derived from fudo-entities, and entity data reaches most of a
+            # host's configuration, so a nameserver's system closure moves
+            # whenever that input is bumped -- whether or not the bump was a
+            # DNS change. With the zonefiles inside it, the cheapest thing the
+            # fleet does, correcting an IP, cost a full evaluate-build-deploy
+            # of the entire nameserver before the record could move. Split
+            # out, it is this profile alone: `deploy .#<host>.dns-zones`,
+            # seconds end to end.
+            #
+            # The system generation still moves; it just no longer has to be
+            # deployed first, or at all, for the records to be right. Same
+            # trade the aegis profile makes.
+            dns-zones = {
+              user = "root";
+
+              # Profile-level groups merge with the node's and are filtered per
+              # (node, profile) pair, so `deploy .# --groups dns-zones` is a
+              # fleet-wide zone push that touches no system profile. Intersect
+              # it with the derived `dns-authoritative` group to hit only the
+              # signing nameservers.
+              groups = [ "dns-zones" ];
+
+              # The same path nsd installs from: both sides take it from the
+              # host's `services.fudo-nsd.zonefilesPath`, so they cannot be
+              # pointed at different directories.
+              profilePath = zones.path;
+
+              path = deploy-rs.lib.x86_64-linux.activate.custom zones.package ''
+                set -euo pipefail
+
+                # The *running* system's installer, not the incoming one --
+                # the opposite of the aegis verifier above, and for the
+                # mirror-image reason. That script signs each zone with that
+                # zone's KSK and reloads the nsd running right now, so it has
+                # to be the one built alongside the nsd.conf currently in
+                # force. The incoming generation's copy, if it differs, is
+                # about to run for itself in nsd.service's preStart.
+                #
+                # The store path is passed explicitly rather than left to the
+                # profile link, as the aegis profile does: it keeps the
+                # zonefiles in this profile's closure (so they are copied to
+                # the host and pinned as a GC root), and it installs exactly
+                # the content being activated rather than whatever the link
+                # happens to resolve to.
+                if [ -x /run/current-system/sw/bin/nsd-install-zones ]; then
+                  /run/current-system/sw/bin/nsd-install-zones --reload ${zones.package}
+                else
+                  # First deploy of a host onto the split module: the running
+                  # generation predates the script. The system profile is next
+                  # in profilesOrder and installs the zones itself, so there is
+                  # nothing to do here but link the profile.
+                  echo "dns-zones: no nsd-install-zones in the running system;" \
+                       "leaving installation to the system profile"
+                fi
+              '';
             };
           }) // (optionalAttrs (elem hostname gameSiteHosts) {
             # Standalone static-site profile. Activation links the current
