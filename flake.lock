@@ -24,11 +24,11 @@
     "aegis-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1789602762,
-        "narHash": "sha256-FJBzWWqVLSFBMC13DdFPEwVhr6tMJCKbBK1isZ2hAt0=",
+        "lastModified": 1790037180,
+        "narHash": "sha256-T9VlbT4q+JXe/YZvd2NKNSJvUertM8NDoTN/o0m/m0U=",
         "owner": "fudoniten",
         "repo": "aegis-secrets",
-        "rev": "ca5ee2e3be4b3c05f02357ea8c007effc72dd122",
+        "rev": "54e20a930614f618ee3b717bc50d11c3d1da6f77",
         "type": "github"
       },
       "original": {
@@ -1181,11 +1181,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789785643,
-        "narHash": "sha256-RhoTT42EzCulvMSqyNlfH8hnYy+RW7TjtV/AsDmtYIA=",
+        "lastModified": 1790045137,
+        "narHash": "sha256-dh37N4lYsnpUgnh9NGQCEnvoDWnQ/v0eKDEHLKS0NP0=",
         "ref": "refs/heads/master",
-        "rev": "788a67d0511d86098776d4baa7245c407efce6dc",
-        "revCount": 464,
+        "rev": "04a882340a606296c0c88ea2db67ed531a5ee468",
+        "revCount": 469,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-entities"
       },
@@ -1304,11 +1304,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1789785969,
-        "narHash": "sha256-1NrLsQLuZaJOhu4lkVCenbDod8PFK2ndi8DoWJIPsDA=",
+        "lastModified": 1790131052,
+        "narHash": "sha256-XlkSWC+nWagEsvLMFrs/4zRQn8o/Q97agFTxH3OpUAQ=",
         "ref": "26.05-aegis",
-        "rev": "44c94e64241fab875e78448cc6ef0d3588721b4a",
-        "revCount": 1818,
+        "rev": "3a1c372465286b0d0fff7bebda0f2ac00e14fa75",
+        "revCount": 1861,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -1328,11 +1328,11 @@
         "utils": "utils_6"
       },
       "locked": {
-        "lastModified": 1788913499,
-        "narHash": "sha256-qc+841k6/A/wi1gOl0kivpfoXrf4Pcu7BUoBofJgG2k=",
+        "lastModified": 1790131018,
+        "narHash": "sha256-YYeRkJRcDHwvDX6PgOcz4rjQKREni1N+gyxoaRAmiIs=",
         "owner": "fudoniten",
         "repo": "fudo-nix-pkgs",
-        "rev": "ff03deb3b245a73076f1d8b57a993ab74e695868",
+        "rev": "c8b34fa4b570afcd90778925948897b2e2d67b9f",
         "type": "github"
       },
       "original": {
