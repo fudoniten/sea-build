@@ -1304,11 +1304,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1792433870,
-        "narHash": "sha256-D3NfxVhe2WsOnl8quYVgTCUQz8tQBzOeYJ0qUL5AlGM=",
+        "lastModified": 1792442446,
+        "narHash": "sha256-MIBPjU+Qps/IbTR03pD24+iuX5JxyV35GfhVVuYlIyg=",
         "ref": "26.05-aegis",
-        "rev": "f8684a63ea0511d49213a7b50f6e2dff48afe25a",
-        "revCount": 1904,
+        "rev": "9a822f7c5bcf4dd95fbdb5be5aba80717e7b00d2",
+        "revCount": 1905,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -1873,11 +1873,11 @@
         "utils": "utils_7"
       },
       "locked": {
-        "lastModified": 1792433782,
-        "narHash": "sha256-xJJTCY7yVdGP30pO1Gixol2LFe1v7FPivcfEJcr5npE=",
+        "lastModified": 1792442382,
+        "narHash": "sha256-Gtw+nQ5f8nZiYtQkbn4gB5JTy3sAmTqKTlv7cvqrHmk=",
         "ref": "refs/heads/master",
-        "rev": "55012ea98a5fda0b1b4879875d28a86c3bb78e0e",
-        "revCount": 228,
+        "rev": "5d144c37fa587db8d541720fffb656b2160e03b7",
+        "revCount": 230,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/home-assistant-container"
       },
