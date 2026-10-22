@@ -24,11 +24,11 @@
     "aegis-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1792092045,
-        "narHash": "sha256-p4DabmmJ1yx8cSAK325k1bNkxSw7b214mvsAfvE+l0U=",
+        "lastModified": 1792632892,
+        "narHash": "sha256-UW6gDPhtqaJSFxwMkB2oimUjuly07gq0RUNU1NFb6yM=",
         "owner": "fudoniten",
         "repo": "aegis-secrets",
-        "rev": "eddb889e0146c87ad12eea607f5512ccc733ffdd",
+        "rev": "b1cec9cc96a55280017e7ef5a0d98772e9776e39",
         "type": "github"
       },
       "original": {
@@ -485,11 +485,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1792420374,
-        "narHash": "sha256-i5dTwfPglZYE1zpg2IvBq+n0wDxMdrLwgHuRxZmO6Tw=",
+        "lastModified": 1792446739,
+        "narHash": "sha256-eINUtQW48bf9G3EYprthHMll8VDKxaXQP52TZFuwMmE=",
         "owner": "serokell",
         "repo": "deploy-rs",
-        "rev": "26e0f241b1b7c6b1717fc7babc4852192886bbc0",
+        "rev": "1cec0527bd09074bbee6d4461900ce5d58267217",
         "type": "github"
       },
       "original": {
@@ -675,11 +675,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792423217,
-        "narHash": "sha256-N2mRHVT5jT/+huLfVHc2gbF9lKfUsC6P08erz/rQ2z0=",
+        "lastModified": 1792591858,
+        "narHash": "sha256-35Wc73Sk+GkGJQi2TAqGGQBZYvSJ3Ea3ydnJWAFC2aY=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "40c4d0b06f4592ccd49d14d7a62e986d1188e8d6",
+        "rev": "4e49fdd7321a17af93692166f162b42e76c20ab0",
         "type": "github"
       },
       "original": {
@@ -1156,11 +1156,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792340047,
-        "narHash": "sha256-mNT5MOa6KHeTUzG36PvjuJVQ0QsgOhoBOgthVdA9miI=",
+        "lastModified": 1792531135,
+        "narHash": "sha256-waRpO2vq9LHXzoTCvbnnGxSDi9nBk/pz4XrT8HrJXqk=",
         "ref": "refs/heads/master",
-        "rev": "2ebd687e6b07d3349c2b584049855895d411805f",
-        "revCount": 483,
+        "rev": "3d14a93cf0c08120d2b842c48bbf5c4fa4a92c90",
+        "revCount": 487,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-entities"
       },
@@ -1175,14 +1175,16 @@
           "fudo-nixos",
           "nixpkgs"
         ],
+        "nordwand-mono": "nordwand-mono",
+        "oxanium": "oxanium",
         "utils": "utils_2"
       },
       "locked": {
-        "lastModified": 1749854797,
-        "narHash": "sha256-Oq6uGK7CmbMCFKLk4N40k9efkH9s4iwICXxzkqTiJx0=",
+        "lastModified": 1792517860,
+        "narHash": "sha256-/mmt+2mFVzw3vGWYvJfojpbTX9wZkfEQmHqpyG4ED00=",
         "ref": "refs/heads/master",
-        "rev": "18b1deee84f0403fffcb6ba64ac74a14cb289e6a",
-        "revCount": 3,
+        "rev": "511f4d1f1a5bb5c65caae4251d41ac8ecd48bdb7",
+        "revCount": 8,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-fonts"
       },
@@ -1198,8 +1200,8 @@
           "home-manager-config",
           "nixpkgs"
         ],
-        "nordwand-mono": "nordwand-mono",
-        "oxanium": "oxanium",
+        "nordwand-mono": "nordwand-mono_2",
+        "oxanium": "oxanium_2",
         "utils": "utils_8"
       },
       "locked": {
@@ -1302,11 +1304,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1792530502,
-        "narHash": "sha256-egHnlgx3O9BTEZqB9rAHuJc4YKWD0qruuOmY5g11pnc=",
+        "lastModified": 1792638443,
+        "narHash": "sha256-vTGa5igYq3RuE3QEpq3qOmKH0CzapTwf7nLyH6qRoFI=",
         "ref": "26.05-aegis",
-        "rev": "97bb1bd7c10bad053cc9838770997c262614d291",
-        "revCount": 1914,
+        "rev": "dd6b01bfd1ffb87f1c064ee3eae1b9334f55b7f7",
+        "revCount": 1923,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -1926,11 +1928,11 @@
         "zen-browser": "zen-browser"
       },
       "locked": {
-        "lastModified": 1792530467,
-        "narHash": "sha256-QgxjAmcRDFWWnOKUtCo+JYvqvmLj43gCl6WKLr7PT88=",
+        "lastModified": 1792614263,
+        "narHash": "sha256-dqmZGI1toxSgjptVwlIwvhVjvGJ8hqzbh7s355nc/Ww=",
         "owner": "fudoniten",
         "repo": "fudo-nix-home",
-        "rev": "6546f512c9cec802364a28c623f5fda28ad48efd",
+        "rev": "3d163523ad2ebfc59aa15ed16451ca6b3eca1320",
         "type": "github"
       },
       "original": {
@@ -2437,11 +2439,11 @@
         "nixpkgs": "nixpkgs_14"
       },
       "locked": {
-        "lastModified": 1791721963,
-        "narHash": "sha256-BYhx89XJltnRyQeuDKHVL5eSqbbfAcOKuDts7QRsrxQ=",
+        "lastModified": 1792491056,
+        "narHash": "sha256-6n1Dn+WYtD8lprnSi+0k4FjbKfIVNG8lblpJ5MiiqXs=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "60a624466c08787ee8303393b7d4752d1826f14f",
+        "rev": "efb6d0d5e2394c3c5416a18652808aba206c0988",
         "type": "github"
       },
       "original": {
@@ -2543,11 +2545,11 @@
     },
     "nixpkgsUnstable_2": {
       "locked": {
-        "lastModified": 1792094642,
-        "narHash": "sha256-LPFRbrCWWyNsdQLO3SX1B/5UMkFK0hfe7bZR6lENvpc=",
-        "rev": "fe13242281a67641c0102cdb1087f0ebe586c7df",
+        "lastModified": 1792502884,
+        "narHash": "sha256-ij8QUxzTOHovLrNOxVRx+RAhGQFOMsJbji0veiatH5k=",
+        "rev": "02c087f3fe673c9e317f206a627cb6b910336dbe",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1093333.fe13242281a6/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1097682.02c087f3fe67/nixexprs.tar.zst"
       },
       "original": {
         "id": "nixpkgs",
@@ -2751,11 +2753,11 @@
     },
     "nixpkgs_22": {
       "locked": {
-        "lastModified": 1792295010,
-        "narHash": "sha256-fgbb+lnywgXIYBCe0u3OxyebrCN1z8kfFhXH1dyv93A=",
-        "rev": "8ce73368d1efd4d657e9064d29b144a52046b4e8",
+        "lastModified": 1792503283,
+        "narHash": "sha256-OtQ9jaQ9aXZDm61TqykPLZdXJa2NMykYG3d0tbT683U=",
+        "rev": "cd4ea8d57de16f4810bc5f14207bac45fbf19f67",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.12192.8ce73368d1ef/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.12297.cd4ea8d57de1/nixexprs.tar.zst"
       },
       "original": {
         "id": "nixpkgs",
@@ -2903,6 +2905,23 @@
         "type": "github"
       }
     },
+    "nordwand-mono_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790710085,
+        "narHash": "sha256-OYgQAKwPU6DuRYGGc/iYjK0LQBOPQi314cT+pJl85YY=",
+        "owner": "tywr",
+        "repo": "Nordwand-Mono",
+        "rev": "b4cc05881a0ebfcd3a801660251dfe2a71f518db",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tywr",
+        "ref": "1.3.1",
+        "repo": "Nordwand-Mono",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": [
@@ -2981,6 +3000,23 @@
       }
     },
     "oxanium": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1601452957,
+        "narHash": "sha256-1PJJiOulhpqZFrMS4W971T2IamVfoyCoTxstvnOVMyA=",
+        "owner": "sevmeyer",
+        "repo": "oxanium",
+        "rev": "a8f39e0c71186190027a093e9001459410192d1e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sevmeyer",
+        "ref": "2.000",
+        "repo": "oxanium",
+        "type": "github"
+      }
+    },
+    "oxanium_2": {
       "flake": false,
       "locked": {
         "lastModified": 1601452957,
@@ -4281,11 +4317,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792522695,
-        "narHash": "sha256-jTLo+OAKTDjIOEv2YA8xKTkqp1zZ+ZwXjztgXj6E7bk=",
+        "lastModified": 1792595242,
+        "narHash": "sha256-kH/E0uJDslOgYcnmU+c0cm6HrUjsEtvZQKZtuQ1+uvo=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "bb286c34998a498df925c7a7b4d69aea8c44931c",
+        "rev": "f19490ac889eabb05bdb7e8dcb85225ee75bd87b",
         "type": "github"
       },
       "original": {
