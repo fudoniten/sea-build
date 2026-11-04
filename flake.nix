@@ -17,7 +17,6 @@
       inputs = {
         fudo-entities.follows = "fudo-entities";
         nixpkgs.follows = "nixpkgs";
-        fudo-secrets.follows = "fudo-secrets";
       };
     };
 
@@ -32,16 +31,6 @@
     game-site = {
       url = "github:fudoniten/game-site";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Used to override the `nixos-config` secrets, since `sea.fudo.org` and
-    # `burg.fudo.org` use different secrets repos
-    fudo-secrets = {
-      url = "path:/secrets";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        entities.follows = "fudo-entities";
-      };
     };
   };
 
