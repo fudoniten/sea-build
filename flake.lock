@@ -962,11 +962,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1793907753,
-        "narHash": "sha256-wokLeWlwRRDla92BVTUtRKxd4Zl9CqH9lnbmfcgTpuo=",
+        "lastModified": 1793918519,
+        "narHash": "sha256-ahKxw+6YwXtxB9VxAQUCuUACjsuHlWUAqiQjCQEBjE0=",
         "ref": "26.05-aegis",
-        "rev": "73684fed8866a47f0cea649769aade2665f108f4",
-        "revCount": 1987,
+        "rev": "5eae5a1a2d92ac05dd9790b67a56958c0a3a4f03",
+        "revCount": 1993,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -1506,11 +1506,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789091446,
-        "narHash": "sha256-jeDeP0B4DgnpEV0qG1zN9LoqgWQxHGktyZWb2tLBEUs=",
+        "lastModified": 1793918082,
+        "narHash": "sha256-VCVDtEyQFMRL2NsVQgkDKgQy7OHCKdwlGmObERWUxBg=",
         "owner": "fudoniten",
         "repo": "nix-mail-server",
-        "rev": "4fda8cb3d5a13e39cc6cf8de4d13b0455a1026fa",
+        "rev": "d3ec795b1c031be448eaab1bd3ba29d502e783a8",
         "type": "github"
       },
       "original": {
@@ -1531,11 +1531,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1706557789,
-        "narHash": "sha256-LT/L75aU5LazOrjdBmzY01jjjU4ZkP/MwlKy7oWit7o=",
+        "lastModified": 1793918134,
+        "narHash": "sha256-5N8Q7LeW3dlo5jjiN5evncmk4EPskRL/ANoxQ9KUjrA=",
         "owner": "fudoniten",
         "repo": "mastodon-container",
-        "rev": "d3f9019ff0696497e397b2357301b183d30704aa",
+        "rev": "e4d17146f02c46fa5906ca471a0526a9352532fb",
         "type": "github"
       },
       "original": {
@@ -1552,11 +1552,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789575210,
-        "narHash": "sha256-UCHXqrnWuLnYaa96/6fxOKL3mgDJQ+vHhC+UZ+qlAkI=",
+        "lastModified": 1793918093,
+        "narHash": "sha256-xPDDF/fWtkTFxOsCt3hb2RWLTqaYdYwmbW1rfV+1q1w=",
         "owner": "fudoniten",
         "repo": "matrix-module",
-        "rev": "ef48c39a9816a330d2373d34a572d7ab92338890",
+        "rev": "5d599c984f4f49a29b9288c4c02e3a746b185572",
         "type": "github"
       },
       "original": {
