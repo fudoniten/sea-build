@@ -63,6 +63,20 @@
           cfg = fudo-nixos.nixosConfigurations.${hostname}.config.aegis.secrets;
         in if cfg.enable then cfg.runtimePath else null;
 
+      # Hosts that run Minecraft from a standalone profile, read off the host's
+      # own configuration like aegisRuntimePath: the units read through
+      # `profile.path`, so taking this profile's `profilePath` from the same
+      # option keeps the two pointing at the same place. `or` because hosts
+      # built against an older fudo-lib have no `profile` option.
+      minecraftProfile = hostname:
+        let
+          mc =
+            fudo-nixos.nixosConfigurations.${hostname}.config.fudo.services.minecraft.server;
+        in if (mc.enable or false) && (mc.profile.enable or false) then
+          mc.profile
+        else
+          null;
+
       allNodes = let
         nodeEntities = filterAttrs (_: hostOpts: hostOpts.deploy.enable)
           fudo-entities.entities.hosts;
@@ -77,6 +91,7 @@
           # script below.
           aegisVerifier =
             fudo-nixos.nixosConfigurations.${hostname}.config.aegis.secrets.verifyProfilePackage;
+          minecraft = minecraftProfile hostname;
         in {
           hostname = fudo-entities.lib.getHostIpv4 hostname;
           sshOpts = defaultSshOpts ++ hostOpts.deploy.ssh-options;
@@ -123,7 +138,14 @@
           # had to land before the ciphertext could be checked against it. That
           # got it backwards -- the check now travels with the verifier instead
           # of being read off the running machine.)
-          profilesOrder = (optional (aegisPath != null) "aegis") ++ [ "system" ]
+          #
+          # "minecraft" also goes before "system". The first system generation
+          # in profile mode has units that refuse to start without the
+          # profile, so the profile has to exist when they arrive. After that
+          # a system deploy doesn't touch the servers, and the minecraft
+          # profile re-applies its live settings without a restart.
+          profilesOrder = (optional (aegisPath != null) "aegis")
+            ++ (optional (minecraft != null) "minecraft") ++ [ "system" ]
             ++ (optional (elem hostname gameSiteHosts) "game-site");
 
           profiles = {
@@ -223,6 +245,30 @@
                          "leaving unit restarts to the system profile"
                   fi
                 '';
+            };
+          }) // (optionalAttrs (minecraft != null) {
+            # The Minecraft servers' jar, JVM flags, server.properties and
+            # live settings (gamerules, ops, whitelist), built by fudo-lib's
+            # minecraft module from the host's own config. A version bump or a
+            # settings change is a deploy of this profile alone:
+            #   .#deploy.<host>.minecraft
+            #
+            # The activation applies live settings without a restart when the
+            # runtime is unchanged; otherwise it restarts the server and waits
+            # for RCON. A server that doesn't come back fails the activation,
+            # and autoRollback re-links and re-activates the previous profile.
+            # Magic rollback alone wouldn't catch that -- it only proves SSH
+            # still works.
+            minecraft = {
+              user = "root";
+              groups = [ "minecraft" ];
+              profilePath = minecraft.path;
+              # A restart, a world load and the RCON wait take longer than
+              # deploy-rs's default 240 s.
+              activationTimeout = 900;
+              path = deploy-rs.lib.x86_64-linux.activate.custom
+                minecraft.package
+                "${minecraft.package}/bin/minecraft-profile-activate";
             };
           }) // (optionalAttrs (elem hostname gameSiteHosts) {
             # Standalone static-site profile. Activation links the current
