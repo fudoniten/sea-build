@@ -77,6 +77,21 @@
         else
           null;
 
+      # Hosts whose nsd serves its zones from a standalone profile, read off
+      # the host's own configuration like minecraftProfile: nsd.service reads
+      # through `profile.path`, so taking this profile's `profilePath` from the
+      # same option keeps the two pointing at the same place. `or` because
+      # hosts built against an older authoritative-dns-module have no
+      # `profile` option.
+      dnsProfile = hostname:
+        let
+          nsd =
+            fudo-nixos.nixosConfigurations.${hostname}.config.services.fudo-nsd or { };
+        in if (nsd.enable or false) && (nsd.profile.enable or false) then
+          nsd.profile
+        else
+          null;
+
       allNodes = let
         nodeEntities = filterAttrs (_: hostOpts: hostOpts.deploy.enable)
           fudo-entities.entities.hosts;
@@ -92,6 +107,7 @@
           aegisVerifier =
             fudo-nixos.nixosConfigurations.${hostname}.config.aegis.secrets.verifyProfilePackage;
           minecraft = minecraftProfile hostname;
+          dns = dnsProfile hostname;
         in {
           hostname = fudo-entities.lib.getHostIpv4 hostname;
           sshOpts = defaultSshOpts ++ hostOpts.deploy.ssh-options;
@@ -144,8 +160,14 @@
           # profile, so the profile has to exist when they arrive. After that
           # a system deploy doesn't touch the servers, and the minecraft
           # profile re-applies its live settings without a restart.
+          #
+          # "dns" goes before "system" for the same reason: in profile mode
+          # nsd refuses to start until the profile exists. Its activation
+          # leaves a system that is not in profile mode yet alone, so on the
+          # first rollout the system profile is what restarts nsd into it.
           profilesOrder = (optional (aegisPath != null) "aegis")
-            ++ (optional (minecraft != null) "minecraft") ++ [ "system" ]
+            ++ (optional (minecraft != null) "minecraft")
+            ++ (optional (dns != null) "dns") ++ [ "system" ]
             ++ (optional (elem hostname gameSiteHosts) "game-site");
 
           profiles = {
@@ -269,6 +291,31 @@
               path = deploy-rs.lib.x86_64-linux.activate.custom
                 minecraft.package
                 "${minecraft.package}/bin/minecraft-profile-activate";
+            };
+          }) // (optionalAttrs (dns != null) {
+            # nsd.conf and the zones, built by authoritative-dns-module from
+            # the host's own config. A record change is a deploy of this
+            # profile alone:
+            #   .#deploy.<host>.dns
+            # and `deploy .# --groups dns` is every primary's zones, touching
+            # no system profile. (The node group `dns-authoritative` is the
+            # same hosts, but selects all of their profiles.)
+            #
+            # The activation reloads nsd when only zone contents changed and
+            # restarts it when nsd.conf did (a zone added or removed), then
+            # waits up to 60 s for every zone the host is primary for to answer
+            # with its new serial. A miss fails the activation, and
+            # autoRollback re-links and re-activates the previous profile --
+            # magic rollback alone only proves SSH still works. Secondaries
+            # pick the change up by NOTIFY/AXFR and need no deploy.
+            dns = {
+              user = "root";
+              groups = [ "dns" ];
+              profilePath = dns.path;
+              # Re-signing every DNSSEC zone, a restart and the serial check.
+              activationTimeout = 600;
+              path = deploy-rs.lib.x86_64-linux.activate.custom dns.package
+                "${dns.package}/bin/nsd-profile-activate";
             };
           }) // (optionalAttrs (elem hostname gameSiteHosts) {
             # Standalone static-site profile. Activation links the current
