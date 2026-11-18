@@ -351,8 +351,20 @@
           deploy = {
             type = "app";
             program = toString (pkgs.writeShellScript "deploy" ''
-              host="''${1:?usage: nix run .#deploy -- <hostname> [deploy-rs flags...]}"
+              target="''${1:?usage: nix run .#deploy -- <hostname> [deploy-rs flags...]}"
               shift
+              # Accept `.#host` as well as `host`. Without this, `.#system7`
+              # became `.#.#system7`; deploy-rs reads the `#system7` part of
+              # that fragment as a Nix comment, so the target parses as "no
+              # node" and it evaluates (and would deploy) every host.
+              host="''${target#.#}"
+              case "$host" in
+                "" | .* | *"#"*)
+                  echo "deploy: expected a node name like 'system7' or 'system7.system', got '$target'" >&2
+                  echo "        (to deploy everything, run deploy-rs directly)" >&2
+                  exit 2
+                  ;;
+              esac
               exec ${deploy-rs-bin} ".#$host" "$@"
             '');
             meta = {
