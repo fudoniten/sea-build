@@ -24,11 +24,11 @@
     "aegis-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1794933931,
-        "narHash": "sha256-CE+F9ZtDO3P2qdtfZOt0ohOqShYlrVDdVVy3DDODcFw=",
+        "lastModified": 1795048103,
+        "narHash": "sha256-qChH5Di24GAwnPtsCTD3FLVmHqQjLqV3JCOVMkVXORU=",
         "owner": "fudoniten",
         "repo": "aegis-secrets",
-        "rev": "718427bf385af290b756a1ccf33f9dde6228e21e",
+        "rev": "644c15aa3490b58daf305fa2963202b3034b4b7d",
         "type": "github"
       },
       "original": {
@@ -481,11 +481,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794900727,
-        "narHash": "sha256-n3Uhn6x3LMkaTdct9Y4r67F0gTl25vixxqztiPZk44Q=",
+        "lastModified": 1795021202,
+        "narHash": "sha256-bccldzkyxvm8FuwT3buRc6hmre0qNSWQi6HqfFPHVQg=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "f5644fc6d5f604fbfcabb82ba5ba52b39f5b14dd",
+        "rev": "882675ce755919a401a530b2c09b4e1e360ba962",
         "type": "github"
       },
       "original": {
@@ -833,11 +833,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794847291,
-        "narHash": "sha256-Ejc25NdCX+DGRt6kM3PD6zKwulqhxr9KpU+lwb7Empk=",
+        "lastModified": 1795047697,
+        "narHash": "sha256-9eojjCcp2QI28Yi/tjvv2MkqwNI3a7fidyYHW+Js4Kw=",
         "ref": "refs/heads/master",
-        "rev": "4cc98c170f1b8d387ee48d9d56a3ef05be2e3412",
-        "revCount": 509,
+        "rev": "e9c131d5662b0e29a285d84f0da3d9703118ea83",
+        "revCount": 511,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-entities"
       },
@@ -913,11 +913,11 @@
     },
     "fudo-lib_2": {
       "locked": {
-        "lastModified": 1794507369,
-        "narHash": "sha256-Fgd7SrOV6pQq9psDNx5wNPed8+zrJpZmxcVulh1IBwc=",
+        "lastModified": 1795014926,
+        "narHash": "sha256-9NtNREThK0Hj3tLOb7+LcRYlrErrcC/8Vb6wcdbuVNo=",
         "owner": "fudoniten",
         "repo": "fudo-nix-lib",
-        "rev": "5295dbe4e316d4667dbdba5f424e924f92973c34",
+        "rev": "3679c1970280ab4923107c0d45621c1407e3d4af",
         "type": "github"
       },
       "original": {
@@ -962,11 +962,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1794969315,
-        "narHash": "sha256-7Bka1V5/g3wxvRwKa5Z/BUoRgF2scCFCUtPjrrqTp8I=",
+        "lastModified": 1795049186,
+        "narHash": "sha256-HegkT397ifcAl/ma9rTFdrsG9egBQfhcZtR5XJsC9YA=",
         "ref": "26.05-aegis",
-        "rev": "62c776386cad762d3bbd36a323549bf5c3561bf6",
-        "revCount": 2093,
+        "rev": "629d3787a689925d4e0dd45eb520e23a2dce7074",
+        "revCount": 2096,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -1765,11 +1765,11 @@
         "nixpkgs": "nixpkgs_14"
       },
       "locked": {
-        "lastModified": 1794906521,
-        "narHash": "sha256-B3ox9O5jQ7/RU2IECjP6MtA0BRqL9+yunGJRow0c1gA=",
+        "lastModified": 1795018746,
+        "narHash": "sha256-glQAHvZGgBVjzGIWgIZYSf3X10gvtO2LPR4rtyP/Soc=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "d9da8426d86bd7e937226f5ecef1df1504ead2e8",
+        "rev": "33475966110df258f52d05ec4d4cd6394637cbb9",
         "type": "github"
       },
       "original": {
@@ -1847,11 +1847,11 @@
     },
     "nixpkgsUnstable_2": {
       "locked": {
-        "lastModified": 1794537146,
-        "narHash": "sha256-bTKSclXJAmo9qdxPedTBHUGr8awPr4BrbOoOutJsYIc=",
-        "rev": "d5cc6833999746cffdfe0598f7bc801a57b887a9",
+        "lastModified": 1794890597,
+        "narHash": "sha256-vJoAj1xon3Mhfc8FZ5uBrPyZee9Eqa05gG/taXv6iZ8=",
+        "rev": "04906337b6d53e8bb0eaf0470ae9f070a4d4eb55",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1119549.d5cc68339997/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1122823.04906337b6d5/nixexprs.tar.zst"
       },
       "original": {
         "id": "nixpkgs",
