@@ -962,11 +962,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1795541083,
-        "narHash": "sha256-9NSUdHNGCB/U5H2kuzm73A1XdGR95ZDgGx49v84ptyE=",
+        "lastModified": 1795547902,
+        "narHash": "sha256-CMfqXVXejeMH6Qpx9OA3mfol39oRoiTDM92CfPE38CU=",
         "ref": "26.05-aegis",
-        "rev": "0d86e65c5c789ad2d9422ab323cae4870adcab95",
-        "revCount": 2192,
+        "rev": "9ca0d72f0f7ebd26f7bd9e827e14182d4a485eb7",
+        "revCount": 2196,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -2215,11 +2215,11 @@
     },
     "paris": {
       "locked": {
-        "lastModified": 1795539416,
-        "narHash": "sha256-Hu1M1+prRsFMrOm+fzQlmjbrVk3eTNi6gaO06QxB+uE=",
+        "lastModified": 1795547330,
+        "narHash": "sha256-J9eVTDmAfWNnwekiH46rerr+7r/5znZYRZZnXVquFXE=",
         "ref": "refs/heads/master",
-        "rev": "08d93e00faed824b4b026cffe7924e40b6b2f0e2",
-        "revCount": 77,
+        "rev": "8627dad1a7629d6d02f661bcf6f6f0dde9a8201e",
+        "revCount": 79,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/paris-container"
       },
