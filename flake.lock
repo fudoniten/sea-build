@@ -962,11 +962,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1795499933,
-        "narHash": "sha256-qkUrEdh0Gou838C8NPHhzTcQWuPBpiG+VI4hitzOtgs=",
+        "lastModified": 1795503837,
+        "narHash": "sha256-3JKuTPi0yq134YDQxQN1ez4J+4CQ83q0SLDSIyT44xg=",
         "ref": "26.05-aegis",
-        "rev": "a3d630409c2a48a8d34a8c41fee489e6008232c1",
-        "revCount": 2184,
+        "rev": "7e404a975b6a830b0766aef5630041306695e2f8",
+        "revCount": 2185,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -1531,11 +1531,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793918134,
-        "narHash": "sha256-5N8Q7LeW3dlo5jjiN5evncmk4EPskRL/ANoxQ9KUjrA=",
+        "lastModified": 1795503816,
+        "narHash": "sha256-JWA+QHDw5JtP2bkSCFL6xu7rdkXKTwLADnTkMcTWO3s=",
         "owner": "fudoniten",
         "repo": "mastodon-container",
-        "rev": "e4d17146f02c46fa5906ca471a0526a9352532fb",
+        "rev": "ed045d0b1390ac5c188e58afd653594c3de83681",
         "type": "github"
       },
       "original": {
