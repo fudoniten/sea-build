@@ -24,11 +24,11 @@
     "aegis-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1795567545,
-        "narHash": "sha256-PJauw1/S3ubQ/OBOHLDsyBWpZgdKvoFWS9EQrscAK00=",
+        "lastModified": 1795645908,
+        "narHash": "sha256-7R3qzjRUGWUeTh3XuGgdepp4wHISME96M+bRSI40Y9s=",
         "owner": "fudoniten",
         "repo": "aegis-secrets",
-        "rev": "51922a25956f45afc031747623e22569e6b42d3d",
+        "rev": "8fffc078a3a6bfed5280fe9bb7f61e930abec5d3",
         "type": "github"
       },
       "original": {
@@ -481,11 +481,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795512236,
-        "narHash": "sha256-Ftn28kkbthBQMg5PiFz1UmxOqAljlRHjOIvUppoSdmY=",
+        "lastModified": 1795635061,
+        "narHash": "sha256-qItkZmInrhO2mAuiome2KZyRTjUTsDRZhUr9HkxHPlo=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "b56455571badeea971266b6fa8589aff4e5711df",
+        "rev": "97757ee0d23c7454607d29585291f9574bf65784",
         "type": "github"
       },
       "original": {
@@ -833,11 +833,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795538559,
-        "narHash": "sha256-0qKPnjrMIkCjSzimYqMpw2HpEZRH0f0RdT/7RKColBk=",
+        "lastModified": 1795650577,
+        "narHash": "sha256-kDlepwGL+Fuap69g40LqDLN95zBi84McfH6E76WthT0=",
         "ref": "refs/heads/master",
-        "rev": "bcc8e7c9a854ae6be94bc8141479d5e3ba4f2f1d",
-        "revCount": 525,
+        "rev": "070d3f0619f7abf8d2fc7fa87b2943221d31b53f",
+        "revCount": 527,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/fudo-entities"
       },
@@ -962,11 +962,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1795639251,
-        "narHash": "sha256-z+n+6Askx6BWLqGmLL7JbANfE8R+Jg2xP30YhM4NdPQ=",
+        "lastModified": 1795650681,
+        "narHash": "sha256-gLwPwHE0kwcTxGv2o4ZjG97TCD82zVsMdHFceiaYky8=",
         "ref": "26.05-aegis",
-        "rev": "f0732a06b5a029c24a8444a798ea69af1fb14b0a",
-        "revCount": 2205,
+        "rev": "6a693cf7e0db944267640021b5f29446a11e1e09",
+        "revCount": 2210,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
@@ -1460,11 +1460,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794179734,
-        "narHash": "sha256-ew6XSLN26HtI7KUZEZftltL2mWJ3jcGciySZzbyqCbw=",
+        "lastModified": 1795644776,
+        "narHash": "sha256-a7AOEyIn1rt4lOv/s3X9PFa/p6dvdalBB1xQxfE/QQw=",
         "owner": "fudoniten",
         "repo": "kubernetes-cluster",
-        "rev": "fbca4dc732f3425ab5386891c30150b2e1e56565",
+        "rev": "43082f88a94939b2eeef7e35c11fc6f21e2deddc",
         "type": "github"
       },
       "original": {
@@ -1765,11 +1765,11 @@
         "nixpkgs": "nixpkgs_14"
       },
       "locked": {
-        "lastModified": 1795505195,
-        "narHash": "sha256-HoBMYHQYxai9NTe3ED6MrZwo2S56ocxgMwTgwmybjJM=",
+        "lastModified": 1795549782,
+        "narHash": "sha256-0mlYwyAv7lUDD6HBgPMqBXjMcIfIZBsLryNnkspeIGs=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "ff49dbf39553717ac8e0f4d5085fa0ca10c1031f",
+        "rev": "97a30ee0974b815496bec7b136af6b945bd65aef",
         "type": "github"
       },
       "original": {
