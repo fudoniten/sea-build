@@ -962,11 +962,11 @@
         "wallfly": "wallfly"
       },
       "locked": {
-        "lastModified": 1795591811,
-        "narHash": "sha256-HrKXJ0hJDL8hxJvRIsf6yuWWqx3B8yFCJQcYgZAaLyg=",
+        "lastModified": 1795639251,
+        "narHash": "sha256-z+n+6Askx6BWLqGmLL7JbANfE8R+Jg2xP30YhM4NdPQ=",
         "ref": "26.05-aegis",
-        "rev": "0e0c3dc23f6beb73a742abdbd0c880af5f08a2c5",
-        "revCount": 2203,
+        "rev": "f0732a06b5a029c24a8444a798ea69af1fb14b0a",
+        "revCount": 2205,
         "type": "git",
         "url": "ssh://git@github.com/fudoniten/nixos-config.git"
       },
